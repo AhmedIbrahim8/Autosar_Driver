@@ -180,7 +180,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -2110,6 +2110,9 @@
         </settings>
     </configuration>
     <file>
+        <name>$PROJ_DIR$\Common_Macros.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\Compiler.h</name>
     </file>
     <file>
@@ -2120,5 +2123,8 @@
     </file>
     <file>
         <name>$PROJ_DIR$\Port.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\Std_Types.h</name>
     </file>
 </project>
