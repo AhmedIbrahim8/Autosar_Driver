@@ -44,11 +44,27 @@
    #error "The Autosar Version of Std_Types doesn't match the version of Port driver"
 #endif
 
+/* Not Autosar File */
+#include "Common_Macros"
 
 
+/******************************************************************************
+ *                              API Service Id                                *
+ ******************************************************************************/
+/* Service ID of Port_Init */
+#define PORT_INIT_SID                                (uint8)0x00
 
+/* Sercive ID of Port_SetPinDirection Function      */
+#define PORT_SET_PIN_DIRECTION_SID                   (uint8)0x01
 
+/* Sercive ID of Port_RefreshPortDirection Function */
+#define PORT_REFRESH_PORT_DIRECTION_SID              (uint8)0x02
 
+/* Sercive ID of Port_GetVersionInfo Function       */
+#define PORT_GET_VERSION_INFO_SID                    (uint8)0x03
+
+/* Sercive ID of Port_SetPinMode Function           */
+#define PORT_SET_PIN_MODE_SID                        (uint8)0x04
 
 
 #endif
