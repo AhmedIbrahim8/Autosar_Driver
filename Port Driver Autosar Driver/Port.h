@@ -91,4 +91,27 @@
 #define  PORT_E_PARAM_POINTER              (uint8)0x10
 
 
+/*******************************************************************************
+ *                              Module Data Types                              *
+ *******************************************************************************/
+/* Data type for the symbolic name of a port pin */
+typedef uint8 Port_PinType;
+
+/* Possible directions of a port pin             */
+typedef enum{
+  PORT_PIN_IN,PORT_PIN_OUT
+}Port_PinDirectionType;
+
+/* Different port pin modes                      */
+typedef uint8 Port_PinModeType;
+
+typedef struct{
+  
+}Port_ConfigChannel;
+
+
+typedef struct{
+  Port_ConfigChannel channels[43];
+}Port_ConfigType,
+
 #endif
