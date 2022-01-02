@@ -44,6 +44,13 @@
    #error "The Autosar Version of Std_Types doesn't match the version of Port driver"
 #endif
 
+#include "Port_Cfg.h"
+#if ((PORT_SW_MAJOR_VERSION!=PORT_CFG_SW_MAJOR_VERSION)\
+  || (PORT_SW_MINOR_VERSION!=PORT_CFG_SW_MINOR_VERSION)\
+  || (PORT_SW_PATCH_VERSION!=PORT_CFG_SW_PATCH_VERSION))
+   #error "The Software Version of Port_Cfg.h doesn't match the version of Port.h driver"
+#endif
+
 /* Not Autosar File */
 #include "Common_Macros"
 

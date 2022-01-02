@@ -13,16 +13,16 @@
 #define PORT_CFG_H
 
 /* SoftWare Module Version */
-#define PORT_SW_MAJOR_VERSION     (1U)
-#define PORT_SW_MINOR_VERSION     (0U)
-#define PORT_SW_PATCH_VERSION     (0U)
+#define PORT_CFG_SW_MAJOR_VERSION           (1U)
+#define PORT_CFG_SW_MINOR_VERSION           (0U)
+#define PORT_CFG_SW_PATCH_VERSION           (0U)
 
 /*
  * AUTOSAR Version 4.0.3
  */
-#define PORT_AR_RELEASE_MAJOR_VERSION   (4U)
-#define PORT_AR_RELEASE_MINOR_VERSION   (0U)
-#define PORT_AR_RELEASE_PATCH_VERSION   (3U)
+#define PORT_CFG_AR_RELEASE_MAJOR_VERSION   (4U)
+#define PORT_CFG_AR_RELEASE_MINOR_VERSION   (0U)
+#define PORT_CFG_AR_RELEASE_PATCH_VERSION   (3U)
 
 /* Pre-compile option for Development Error Detection         */
 #define PORT_DEV_ERROR_DETECT         (STD_ON)
