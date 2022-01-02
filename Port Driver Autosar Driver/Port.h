@@ -36,4 +36,5 @@
 /* Defines for Port status */
 #define PORT_INITIALIZED               (1U)
 #define PORT_NOT_INITIALIZED               (0U)
+
 #endif
