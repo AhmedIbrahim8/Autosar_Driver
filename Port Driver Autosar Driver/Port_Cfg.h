@@ -36,5 +36,7 @@
 /* Pre-compile option to presence of Port_VerionInfo Api      */
 #define PORT_VERSION_INFO_API         (STD_ON)
 
+/* Number of pins in the TM4C123GH6PM */
+#define PORT_NUM_OF_CONFIGURED_PINS   (43U)
 
 #endif

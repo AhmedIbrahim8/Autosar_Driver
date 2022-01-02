@@ -131,7 +131,7 @@ typedef struct{
 
 
 typedef struct{
-  Port_ConfigChannel channels[43];
+  Port_ConfigChannel channels[PORT_NUM_OF_CONFIGURED_PINS];
 }Port_ConfigType,
 
 
