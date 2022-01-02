@@ -29,12 +29,26 @@
 /*
  * AUTOSAR Version 4.0.3
  */
-#define DIO_AR_RELEASE_MAJOR_VERSION   (4U)
-#define DIO_AR_RELEASE_MINOR_VERSION   (0U)
-#define DIO_AR_RELEASE_PATCH_VERSION   (3U)
+#define PORT_AR_RELEASE_MAJOR_VERSION   (4U)
+#define PORT_AR_RELEASE_MINOR_VERSION   (0U)
+#define PORT_AR_RELEASE_PATCH_VERSION   (3U)
 
 /* Defines for Port status */
 #define PORT_INITIALIZED               (1U)
 #define PORT_NOT_INITIALIZED               (0U)
+
+#include "Std_Types"
+#if ((PORT_AR_RELEASE_MAJOR_VERSION!=STD_TYPES_AR_RELEASE_MAJOR_VERSION)\
+  || (PORT_AR_RELEASE_MINOR_VERSION!=STD_TYPES_AR_RELEASE_MINOR_VERSION)\
+  || (PORT_AR_RELEASE_PATCH_VERSION!=STD_TYPES_AR_RELEASE_PATCH_VERSION))
+   #error "The Autosar Version of Std_Types doesn't match the version of Port driver"
+#endif
+
+
+
+
+
+
+
 
 #endif
