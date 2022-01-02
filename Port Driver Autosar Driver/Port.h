@@ -38,18 +38,31 @@
 #define PORT_NOT_INITIALIZED               (0U)
 
 #include "Std_Types"
+/* Check The Autosar Version between Port.h and Std_Types.h */
 #if ((PORT_AR_RELEASE_MAJOR_VERSION!=STD_TYPES_AR_RELEASE_MAJOR_VERSION)\
   || (PORT_AR_RELEASE_MINOR_VERSION!=STD_TYPES_AR_RELEASE_MINOR_VERSION)\
   || (PORT_AR_RELEASE_PATCH_VERSION!=STD_TYPES_AR_RELEASE_PATCH_VERSION))
-   #error "The Autosar Version of Std_Types doesn't match the version of Port driver"
+   #error "The Autosar Version of Std_Types.h doesn't match the version of Port.h driver"
 #endif
 
 #include "Port_Cfg.h"
+/* The Autosar Version and Software Version between Port.h and Port_Cfg.h must be the same 
+   Because Port_Cfg.h belongs to the Port.h so it must be the same 2 version               */
+
+/* Check The Software Version between Port.h and Port_Cfg.h */
 #if ((PORT_SW_MAJOR_VERSION!=PORT_CFG_SW_MAJOR_VERSION)\
   || (PORT_SW_MINOR_VERSION!=PORT_CFG_SW_MINOR_VERSION)\
   || (PORT_SW_PATCH_VERSION!=PORT_CFG_SW_PATCH_VERSION))
    #error "The Software Version of Port_Cfg.h doesn't match the version of Port.h driver"
 #endif
+
+/* Check The Autosar Version between Port.h and Port_Cfg.h */
+#if ((PORT_AR_MAJOR_VERSION!=PORT_CFG_AR_MAJOR_VERSION)\
+  || (PORT_AR_MINOR_VERSION!=PORT_CFG_AR_MINOR_VERSION)\
+  || (PORT_AR_PATCH_VERSION!=PORT_CFG_AR_PATCH_VERSION))
+   #error "The Autosar Version of Port_Cfg.h doesn't match the version of Port.h driver"
+#endif
+
 
 /* Not Autosar File */
 #include "Common_Macros"
