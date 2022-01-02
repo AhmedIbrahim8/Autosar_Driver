@@ -37,6 +37,20 @@
 #define PORT_VERSION_INFO_API         (STD_ON)
 
 /* Number of pins in the TM4C123GH6PM */
-#define PORT_NUM_OF_CONFIGURED_PINS   (43U)
+#define PORT_CONFIGURED_PINS   (43U)
+
+/* As Required in PORT SWS in page 44 */
+#define PORT_PIN_MODE_ADC
+#define PORT_PIN_MODE_CAN
+#define PORT_PIN_MODE_DIO
+#define PORT_PIN_MODE_DIO_GPT
+#define PORT_PIN_MODE_DIO_WDG
+#define PORT_PIN_MODE_FLEXRAY
+#define PORT_PIN_MODE_ICU
+#define PORT_PIN_MODE_LIN
+#define PORT_PIN_MODE_MEM
+#define PORT_PIN_MODE_PWM
+#define PORT_PIN_MODE_SPI
+
 
 #endif
