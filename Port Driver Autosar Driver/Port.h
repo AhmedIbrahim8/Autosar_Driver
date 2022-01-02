@@ -114,4 +114,39 @@ typedef struct{
   Port_ConfigChannel channels[43];
 }Port_ConfigType,
 
+
+/*******************************************************************************
+ *                      Function Prototypes                                    *
+ *******************************************************************************/
+
+/* The function Port_Init shall initialize ALL ports and port pins 
+   with the configuration set pointed to by the parameter ConfigPtr                  */
+void Port_Init( const Port_ConfigType* ConfigPtr );
+
+
+/* The function Port_RefreshPortDirection shall refresh the direction of 
+   all configured ports to the configured direction (PortPinDirection)               */
+void Port_RefreshPortDirection( void );
+
+#if (PORT_VERSION_INFO_API == STD_ON)
+/* The function Port_GetVersionInfo shall return the version information of this module. 
+   The version information includes:
+                                   - Module Id
+                                   - Vendor Id
+                                   - Vendor specific version numbers (BSW00407)      */
+void Port_GetVersionInfo( Std_VersionInfoType* versioninfo );
+#endif
+
+#if (PORT_SET_PIN_MODE_API == STD_ON)
+/* The function Port_SetPinMode shall set the port pin mode of 
+   the referenced pin during runtime                                                 */
+void Port_SetPinMode( Port_PinType Pin, Port_PinModeType Mode );
+#endif
+
+#if (PORT_SET_PIN_DIRECTION_API == STD_ON)
+/* The function Port_SetPinDirection shall set the port pin direction during runtime */
+void Port_SetPinDirection( Port_PinType Pin, Port_PinDirectionType Direction );
+#endif
+
+
 #endif
