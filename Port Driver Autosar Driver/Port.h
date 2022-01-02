@@ -49,7 +49,7 @@
 
 
 /******************************************************************************
- *                              API Service Id                                *
+ *                              API Service IDs                                *
  ******************************************************************************/
 /* Service ID of Port_Init */
 #define PORT_INIT_SID                                (uint8)0x00
@@ -65,6 +65,30 @@
 
 /* Sercive ID of Port_SetPinMode Function           */
 #define PORT_SET_PIN_MODE_SID                        (uint8)0x04
+
+/*******************************************************************************
+ *                               DET Error IDs                                 *
+ *******************************************************************************/
+/* Det ID incase of invalid port pin id                             */
+#define  PORT_E_PARAM_PIN                  (uint8)0x0A
+
+/* Det ID incase of port pin direction not configured as changeable */
+#define  PORT_E_DIRECTION_UNCHANGEABLE     (uint8)0x0B
+
+/* Det ID incase of Port_Init Function is called with NULL pointer  */
+#define  PORT_E_PARAM_CONFIG               (uint8)0x0C
+
+/* Det ID incase of Port_SetPinMode is called with wrong mode       */
+#define  PORT_E_PARAM_INVALID_MODE         (uint8)0x0D
+
+/* Det ID incase of Port pin mode not configured as changeable      */
+#define  PORT_E_MODE_UNCHANGEABLE          (uint8)0x0E
+
+/* Det ID incase of API service is called without initialization    */
+#define  PORT_E_UNINIT                     (uint8)0x0F
+
+/* Det ID incase of APIs called with a Null Pointer                 */
+#define  PORT_E_PARAM_POINTER              (uint8)0x10
 
 
 #endif
