@@ -42,7 +42,67 @@ uint8 Port_Status = PORT_NOT_INITIALIZED;
 ************************************************************************************/
 void Port_Init( const Port_ConfigType* ConfigPtr )
 {
+  /* local variable used to loop of the configuration array       */
+  uint8 counter;
+  /* local variable to store the base address of the GPIO Register*/
+  volatile uint32 *Port_Base_Address_Ptr = NULL_PTR;
+  /* To wait three(3) seconds untill clock reach the Port */
+  volatile uint8 dealy;
   
+#if (PORT_DEV_ERROR_DETECT == STD_HIGH)
+  if(ConfigPtr == NULL_PTR){
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_INIT_SID,
+                    PORT_E_PARAM_CONFIG);
+  }
+  else
+#endif
+  {
+    /* Intializing the Port so, the status should be updated */
+    Port_Status= PORT_INITIALIZED;
+    /* Port_channels is variable from type Port_ConfigChannel             *
+     * ConfigPtr is variable from type Port_ConfigType                    *
+     * Here, Port_Channels will point to the first array in the structure */
+    Port_Channels = ConfigPtr->channels;
+    for(counter=FIRST_LOOP;counter<PORT_CONFIGURED_PINS;counter++)
+    {
+      switch(Port_Channels[counter].port_num)
+      {
+        /* PORTA Base Address */
+      case PORTA_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTA_BASE_ADDRESS;
+        break;
+        /* PORTB Base Address */
+      case PORTB_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTB_BASE_ADDRESS;
+        break;
+        /* PORTC Base Address */
+      case PORTC_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTC_BASE_ADDRESS;
+        break;
+        /* PORTD Base Address */
+      case PORTD_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTD_BASE_ADDRESS;
+        break;
+        /* PORTE Base Address */
+      case PORTE_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTE_BASE_ADDRESS;
+        break;
+        /* PORTF Base Address */
+      case PORTF_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTF_BASE_ADDRESS;
+        break;
+        /* (Misra Rules) */
+      default:
+        /* NO Action is needed (Misra Rules)*/
+        break;
+      } 
+      
+      
+      
+    }
+  }
   
   
 }

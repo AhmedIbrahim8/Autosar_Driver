@@ -163,6 +163,7 @@ typedef struct{
 #define PORTD_ID       (Port_PortType)3
 #define PORTE_ID       (Port_PortType)4
 #define PORTF_ID       (Port_PortType)5
+#define FIRST_LOOP     (0U)
 
 /*******************************************************************************
  *                      Function Prototypes                                    *
