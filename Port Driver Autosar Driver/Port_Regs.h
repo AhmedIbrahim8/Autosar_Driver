@@ -36,7 +36,8 @@
 #define PORT_ANALOG_MODE_SEL_REG_OFFSET   0x528
 #define PORT_CTL_REG_OFFSET               0x52C
 
-
+/* Register Responsible to initiate the clock of the Port */
+#define SYSCTL_REGCGC2_REG        (*((volatile uint32 *)0x400FE108))
 
 
 

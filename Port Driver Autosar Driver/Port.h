@@ -163,8 +163,13 @@ typedef struct{
 #define PORTD_ID       (Port_PortType)3
 #define PORTE_ID       (Port_PortType)4
 #define PORTF_ID       (Port_PortType)5
-#define FIRST_LOOP     (0U)
-
+/********************************************************************************
+ *  #s needed for Misra rules (No number in the Codes)                          *                                                  *
+ ********************************************************************************/
+#define FIRST_LOOP              (0U)
+#define MAGIC_NUMBER        (0x4C4F434B)
+#define SPECIAL_PIN_PC7         (7U)
+#define SPECIAL_PIN_PF0         (0U)
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

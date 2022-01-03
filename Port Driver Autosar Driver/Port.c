@@ -97,15 +97,37 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
       default:
         /* NO Action is needed (Misra Rules)*/
         break;
-      } 
+      }
+      /* Initiate the clock of the Port*/
+      SET_BIT(SYSCTL_REGCGC2_REG,Port_Channels[counter].port_num);
+      /* To wait 3-seconds (Equal Operation takes 3-seconds )*/
+      dealy=SYSCTL_REGCGC2_REG;
+      /* Important check : In TivaC PC7 & PF0 are special pins which *
+       *                   are needed to be unlocked first before    *
+       *                   write in it                               */
+      if(((Port_Channels[counter].port_num == PORTC_ID) && (Port_Channels[counter].pin_num == SPECIAL_PIN_PC7))\
+       ||((Port_Channels[counter].port_num == PORTF_ID) && (Port_Channels[counter].pin_num == SPECIAL_PIN_PF0)))
+      {
+        /* To unlock the commit register we put the magic number which is defined in port.h */
+        *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_LOCK_REG_OFFSET)= MAGIC_NUMBER;
+        /* Commit the pin based on the pin_num */
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_COMMIT_REG_OFFSET),Port_Channels[counter].pin_num);
+      }
+      /* Misra Rules */
+      else
+      {
+        /* No Action nedded */
+      }
       
+     
       
-      
-    }
-  }
+    }/* End Of For Loop*/
   
   
-}
+  }  /* End Of else */
+  
+  
+}    /* End of Port_Init() */
 
 
 
