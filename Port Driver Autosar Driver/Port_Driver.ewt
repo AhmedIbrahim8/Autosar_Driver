@@ -2846,10 +2846,19 @@
         <name>$PROJ_DIR$\Compiler.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\Det.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\Det.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\Platform_Types.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\Port.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\Port.h</name>
