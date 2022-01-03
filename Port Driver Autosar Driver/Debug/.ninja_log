@@ -1,0 +1,9 @@
+# ninja log v5
+0	111	6628834475110485	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/main.o	4f16f50a61c5351e
+0	76	6628834860550462	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/main.o	4f16f50a61c5351e
+1	104	6628835071382911	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/main.o	4f16f50a61c5351e
+29	81	6628835371598396	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/Port_PBcfg.o	1f32481f4b4c7d80
+0	90	6628835371608374	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/main.o	4f16f50a61c5351e
+97	595	6628835376714945	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Exe/Port_Driver.out	9d9693aede4f68c4
+0	60	6628836810826708	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/Port_PBcfg.o	1f32481f4b4c7d80
+1	227	6628836932621113	E:/ARM & AUTOSAR/Port Driver/Port Driver Autosar Driver/Debug/Obj/Port_PBcfg.o	1f32481f4b4c7d80

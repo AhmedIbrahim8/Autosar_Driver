@@ -1,4 +1,8 @@
 E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Debug\BrowseInfo\Port_PBcfg.pbi: \
   E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Port_PBcfg.c \
   E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Port.h \
-  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Port_Cfg.h
+  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Std_Types.h \
+  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Platform_Types.h \
+  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Compiler.h \
+  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Port_Cfg.h \
+  E:\ARM\ &\ AUTOSAR\Port\ Driver\Port\ Driver\ Autosar\ Driver\Common_Macros.h

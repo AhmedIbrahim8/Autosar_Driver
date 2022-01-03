@@ -39,4 +39,4 @@
    #error "The Autosar Version of Port_PBcfg.c doesn't match the version of Port.h driver"
 #endif
    
-   
+const Port_ConfigType Port_Configuration;

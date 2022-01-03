@@ -37,7 +37,7 @@
 #define PORT_INITIALIZED               (1U)
 #define PORT_NOT_INITIALIZED               (0U)
 
-#include "Std_Types"
+#include "Std_Types.h"
 /* Check The Autosar Version between Port.h and Std_Types.h */
 #if ((PORT_AR_RELEASE_MAJOR_VERSION!=STD_TYPES_AR_RELEASE_MAJOR_VERSION)\
   || (PORT_AR_RELEASE_MINOR_VERSION!=STD_TYPES_AR_RELEASE_MINOR_VERSION)\
@@ -65,7 +65,7 @@
 
 
 /* Not Autosar File */
-#include "Common_Macros"
+#include "Common_Macros.h"
 
 
 /******************************************************************************
@@ -126,7 +126,12 @@ typedef enum{
 typedef uint8 Port_PinModeType;
 
 /* Not Autosar Type */
-typde uint8 Port_PortType;
+typedef uint8 Port_PortType;
+
+/* Not Autosar Type */
+typedef enum{
+  OFF,PULL_UP,PULL_DOWN
+}Port_InternalResistor;
 
 /* Not Autosar Type */
 typedef struct{
@@ -145,10 +150,7 @@ typedef struct{
   Port_ConfigChannel channels[PORT_CONFIGURED_PINS];
 }Port_ConfigType;
 
-/* Not Autosar Type */
-typedef enum{
-  OFF,PULL_UP,PULL_DOWN
-}Port_InternalResistor;
+
 
 /*******************************************************************************
  *                                Nedded #s                                    *
