@@ -119,6 +119,66 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         /* No Action nedded */
       }
       
+      /* Check the direction of the pins                                *
+       * if input pin :it should determine pull-up internal resistor    *
+       *               or pull-down internal resistor or off based on   *
+       *               the configuration structure                      *
+       * if output pin:it should initiate the pin with the initial value*
+       *               based on the configuration structure             *
+       ******************************************************************/
+      if(Port_Channels[counter].direction == PORT_PIN_IN)
+      {
+        /* Pin is input so zero(0) should be put in the bit number at the Direction Register */
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        /* if Internal Resistor = Pull Down */
+        if(Port_Channels[counter].resistor == PULL_DOWN)
+        {
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_DOWN_REG_OFFSET),Port_Channels[counter].pin_num);
+        }
+        /* if Internal Resistor = Pull Up */
+        else if(Port_Channels[counter].resistor == PULL_UP)
+        {
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_UP_REG_OFFSET),Port_Channels[counter].pin_num);
+        }
+        /* if Internal Resistor = off */
+        else
+        {
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_UP_REG_OFFSET),Port_Channels[counter].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_DOWN_REG_OFFSET),Port_Channels[counter].pin_num);
+        }
+        
+      }
+      else if(Port_Channels[counter].direction == PORT_PIN_OUT)
+      {
+        /* Pin is output so one(1) should be put in the bit number at the Direction Register */
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        /* if initial value of the pin equal zero */
+        if(Port_Channels[counter].initial_value == ZERO)
+        {
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DATA_REG_OFFSET),Port_Channels[counter].pin_num);
+        }
+        /* if initial value of the pin equal one */
+        else if(Port_Channels[counter].initial_value == ONE)
+        {
+          SET_BIT(,Port_Channels[counter].pin_num);
+        }
+        /* Misra Rules */
+        else
+        {
+          /* No Action Needed*/
+        }
+      }
+      /* Misra Rules */
+      else
+      {
+        /* No Action nedded*/
+      }
+      
+      /* Check the modes to adjust : - Control Register           *
+       *                             - Alernative Register        *
+       *                             - Analog Register            *
+       *                             - Digital Register           *
+       ************************************************************/
      
       
     }/* End Of For Loop*/
