@@ -103,7 +103,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 10 7 9 17 13 11</file>
+                    <file> 10 7 18 9 17 13 8 11</file>
                 </tool>
             </inputs>
         </file>

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.1.318/W64 for ARM                  03/Jan/2022  05:25:37
+# IAR ELF Linker V9.20.1.318/W64 for ARM                  03/Jan/2022  19:56:48
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -12,14 +12,16 @@
 #    Command line =
 #        -f "E:\ARM & AUTOSAR\Port Driver\Port Driver Autosar
 #        Driver\Debug\Exe\Port_Driver.out.rsp" ("E:\ARM & AUTOSAR\Port
-#        Driver\Port Driver Autosar Driver\Debug\Obj\main.o" "E:\ARM &
-#        AUTOSAR\Port Driver\Port Driver Autosar Driver\Debug\Obj\Port_PBcfg.o"
-#        --no_out_extension -o "E:\ARM & AUTOSAR\Port Driver\Port Driver
-#        Autosar Driver\Debug\Exe\Port_Driver.out" --redirect
-#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map "E:\ARM
-#        & AUTOSAR\Port Driver\Port Driver Autosar
-#        Driver\Debug\List\Port_Driver.map" --config "C:\Program Files\IAR
-#        Systems\Embedded Workbench
+#        Driver\Port Driver Autosar Driver\Debug\Obj\Det.o" "E:\ARM &
+#        AUTOSAR\Port Driver\Port Driver Autosar Driver\Debug\Obj\main.o"
+#        "E:\ARM & AUTOSAR\Port Driver\Port Driver Autosar
+#        Driver\Debug\Obj\Port.o" "E:\ARM & AUTOSAR\Port Driver\Port Driver
+#        Autosar Driver\Debug\Obj\Port_PBcfg.o" --no_out_extension -o "E:\ARM &
+#        AUTOSAR\Port Driver\Port Driver Autosar
+#        Driver\Debug\Exe\Port_Driver.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map "E:\ARM & AUTOSAR\Port
+#        Driver\Port Driver Autosar Driver\Debug\List\Port_Driver.map" --config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
 #        --entry __iar_program_start --vfe --text_out locale)
 #

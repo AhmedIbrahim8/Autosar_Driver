@@ -35,7 +35,7 @@
 
 /* Defines for Port status */
 #define PORT_INITIALIZED               (1U)
-#define PORT_NOT_INITIALIZED               (0U)
+#define PORT_NOT_INITIALIZED           (0U)
 
 #include "Std_Types.h"
 /* Check The Autosar Version between Port.h and Std_Types.h */
@@ -189,13 +189,20 @@ void Port_GetVersionInfo( Std_VersionInfoType* versioninfo );
 #if (PORT_SET_PIN_MODE_API == STD_ON)
 /* The function Port_SetPinMode shall set the port pin mode of 
    the referenced pin during runtime                                                 */
-void Port_SetPinMode( Port_PinType Pin, Port_PinModeType Mode );
+void Port_SetPinMode( Port_PinType Pin, 
+                      Port_PinModeType Mode );
 #endif
+
 
 #if (PORT_SET_PIN_DIRECTION_API == STD_ON)
 /* The function Port_SetPinDirection shall set the port pin direction during runtime */
-void Port_SetPinDirection( Port_PinType Pin, Port_PinDirectionType Direction );
+void Port_SetPinDirection( Port_PinType Pin,
+                           Port_PinDirectionType Direction );
 #endif
 
+/*******************************************************************************
+ *                              External Variables                             *
+ *******************************************************************************/
+extern const Port_ConfigType Port_Configuration;
 
 #endif

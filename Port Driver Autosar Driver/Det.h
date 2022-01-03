@@ -44,7 +44,7 @@
 #if ((DET_AR_MAJOR_VERSION != STD_TYPES_AR_RELEASE_MAJOR_VERSION)\
  || (DET_AR_MINOR_VERSION != STD_TYPES_AR_RELEASE_MINOR_VERSION)\
  || (DET_AR_PATCH_VERSION != STD_TYPES_AR_RELEASE_PATCH_VERSION))
-  #error "The AR version of Std_Types.h does not match the expected version"
+  #error "The Autosar Version of Std_Types.h doesn't match the version of Det.h"
 #endif
 
 /*******************************************************************************
