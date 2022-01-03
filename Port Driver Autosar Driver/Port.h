@@ -126,10 +126,13 @@ typedef enum{
 typedef uint8 Port_PinModeType;
 
 /* Not Autosar Type */
+typde uint8 Port_PortType;
+
+/* Not Autosar Type */
 typedef struct{
   Port_PinDirectionType direction;
   Port_InternalResistor resistor;
-  uint8 port_num;
+  Port_PortType port_num;
   Port_PinType pin_num;
   uint8 initial_value;
   Port_PinModeType mode;
@@ -139,7 +142,7 @@ typedef struct{
 
 /* Data structure containing the initialization data for the PORT Driver */
 typedef struct{
-  Port_ConfigChannel channels[PORT_NUM_OF_CONFIGURED_PINS];
+  Port_ConfigChannel channels[PORT_CONFIGURED_PINS];
 }Port_ConfigType;
 
 /* Not Autosar Type */
@@ -147,7 +150,17 @@ typedef enum{
   OFF,PULL_UP,PULL_DOWN
 }Port_InternalResistor;
 
-
+/*******************************************************************************
+ *                                Nedded #s                                    *
+ * These #s is needed in the configuration structure to indicate which port is *
+ * used.                                                                       *
+ *******************************************************************************/
+#define PORTA_ID       (Port_PortType)0 
+#define PORTB_ID       (Port_PortType)1
+#define PORTC_ID       (Port_PortType)2
+#define PORTD_ID       (Port_PortType)3
+#define PORTE_ID       (Port_PortType)4
+#define PORTF_ID       (Port_PortType)5
 
 /*******************************************************************************
  *                      Function Prototypes                                    *
