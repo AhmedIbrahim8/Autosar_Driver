@@ -154,12 +154,12 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         /* Pin is output so one(1) should be put in the bit number at the Direction Register */
         SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
         /* if initial value of the pin equal zero */
-        if(Port_Channels[counter].initial_value == ZERO)
+        if(Port_Channels[counter].initial_value == PORT_PIN_LEVEL_LOW)
         {
           CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DATA_REG_OFFSET),Port_Channels[counter].pin_num);
         }
         /* if initial value of the pin equal one */
-        else if(Port_Channels[counter].initial_value == ONE)
+        else if(Port_Channels[counter].initial_value == PORT_PIN_LEVEL_HIGH)
         {
           SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DATA_REG_OFFSET),Port_Channels[counter].pin_num);
         }
@@ -293,7 +293,7 @@ void Port_SetPinDirection( Port_PinType Pin,
   }
   /* Checking if the pin direction is not changeable, it will report a det error *
    * and change the state of the error to be TRUE.                               */
-  if(Port_Channels[Pin].direction_changeable==FALSE)
+  if(Port_Channels[Pin].direction_changeable==STD_OFF)
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
@@ -422,7 +422,7 @@ void Port_RefreshPortDirection( void )
            [PORT061]: The function Port_RefreshPortDirection shall exclude those port pins            *
                       from refreshing that are configured as ‘pin direction changeable during runtime *
        * Check if the pin direction is changeable, it will not be refreshed                           */
-      if(Port_Channels[counter].direction_changeable ==FALSE)
+      if(Port_Channels[counter].direction_changeable ==STD_OFF)
       {
         switch(Port_Channels[counter].port_num)
       {

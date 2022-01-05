@@ -95,6 +95,232 @@
 #define PORTF_PIN3_ID_INDEX   (uint8)41
 #define PORTF_PIN4_ID_INDEX   (uint8)42
 
+/***********************************************
+ *     Choosen Configuration By the Tool       *
+ *      "Pins Direction for all Pins"          *
+ *             PORT SWS Page 42                *
+ ***********************************************/
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN1_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN4_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN5_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN6_DIRECTION  PORT_PIN_IN
+#define PORTA_PIN7_DIRECTION  PORT_PIN_IN
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN1_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN4_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN5_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN6_DIRECTION  PORT_PIN_IN
+#define PORTB_PIN7_DIRECTION  PORT_PIN_IN
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN1_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN4_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN5_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN6_DIRECTION  PORT_PIN_IN
+#define PORTC_PIN7_DIRECTION  PORT_PIN_IN
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN1_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN4_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN5_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN6_DIRECTION  PORT_PIN_IN
+#define PORTD_PIN7_DIRECTION  PORT_PIN_IN
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTE_PIN1_DIRECTION  PORT_PIN_IN
+#define PORTE_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTE_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTE_PIN4_DIRECTION  PORT_PIN_IN
+#define PORTE_PIN5_DIRECTION  PORT_PIN_IN
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_DIRECTION  PORT_PIN_IN
+#define PORTF_PIN1_DIRECTION  PORT_PIN_OUT /* Led pin Should be output pin*/
+#define PORTF_PIN2_DIRECTION  PORT_PIN_IN
+#define PORTF_PIN3_DIRECTION  PORT_PIN_IN
+#define PORTF_PIN4_DIRECTION  PORT_PIN_IN /* Switch pin should be input pin */
+
+/****************************************************
+ *     Choosen Configuration By the Tool            *
+ *  "Pins Direction Changeable for all Pins"        *
+ *             PORT SWS Page 42                     *
+ ****************************************************/
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN1_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN4_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN5_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN6_DIRECTION_CHANGEABLE STD_OFF
+#define PORTA_PIN7_DIRECTION_CHANGEABLE STD_OFF
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN1_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN4_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN5_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN6_DIRECTION_CHANGEABLE STD_OFF
+#define PORTB_PIN7_DIRECTION_CHANGEABLE STD_OFF
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN1_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN4_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN5_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN6_DIRECTION_CHANGEABLE STD_OFF
+#define PORTC_PIN7_DIRECTION_CHANGEABLE STD_OFF
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN1_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN4_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN5_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN6_DIRECTION_CHANGEABLE STD_OFF
+#define PORTD_PIN7_DIRECTION_CHANGEABLE STD_OFF
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTE_PIN1_DIRECTION_CHANGEABLE STD_OFF
+#define PORTE_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTE_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTE_PIN4_DIRECTION_CHANGEABLE STD_OFF
+#define PORTE_PIN5_DIRECTION_CHANGEABLE STD_OFF
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_DIRECTION_CHANGEABLE STD_OFF
+#define PORTF_PIN1_DIRECTION_CHANGEABLE STD_OFF  /* Led Pin Direction Changeable is off */
+#define PORTF_PIN2_DIRECTION_CHANGEABLE STD_OFF
+#define PORTF_PIN3_DIRECTION_CHANGEABLE STD_OFF
+#define PORTF_PIN4_DIRECTION_CHANGEABLE STD_OFF /* Switch Pin Direction Changeable is off */
+
+/****************************************************
+ *     Choosen Configuration By the Tool            *
+ *          "Pins IDs for all Pins"                 *
+ *           PORT SWS Page 42 & 43                  *
+ ****************************************************/
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_ID (Port_PinType)0
+#define PORTA_PIN1_ID (Port_PinType)1
+#define PORTA_PIN2_ID (Port_PinType)2
+#define PORTA_PIN3_ID (Port_PinType)3
+#define PORTA_PIN4_ID (Port_PinType)4
+#define PORTA_PIN5_ID (Port_PinType)5
+#define PORTA_PIN6_ID (Port_PinType)6
+#define PORTA_PIN7_ID (Port_PinType)7
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_ID (Port_PinType)0
+#define PORTB_PIN1_ID (Port_PinType)1
+#define PORTB_PIN2_ID (Port_PinType)2
+#define PORTB_PIN3_ID (Port_PinType)3
+#define PORTB_PIN4_ID (Port_PinType)4
+#define PORTB_PIN5_ID (Port_PinType)5
+#define PORTB_PIN6_ID (Port_PinType)6
+#define PORTB_PIN7_ID (Port_PinType)7
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_ID (Port_PinType)0
+#define PORTC_PIN1_ID (Port_PinType)1
+#define PORTC_PIN2_ID (Port_PinType)2
+#define PORTC_PIN3_ID (Port_PinType)3
+#define PORTC_PIN4_ID (Port_PinType)4
+#define PORTC_PIN5_ID (Port_PinType)5
+#define PORTC_PIN6_ID (Port_PinType)6
+#define PORTC_PIN7_ID (Port_PinType)7
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_ID (Port_PinType)0
+#define PORTD_PIN1_ID (Port_PinType)1
+#define PORTD_PIN2_ID (Port_PinType)2
+#define PORTD_PIN3_ID (Port_PinType)3
+#define PORTD_PIN4_ID (Port_PinType)4
+#define PORTD_PIN5_ID (Port_PinType)5
+#define PORTD_PIN6_ID (Port_PinType)6
+#define PORTD_PIN7_ID (Port_PinType)7
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_ID (Port_PinType)0
+#define PORTE_PIN1_ID (Port_PinType)1
+#define PORTE_PIN2_ID (Port_PinType)2
+#define PORTE_PIN3_ID (Port_PinType)3
+#define PORTE_PIN4_ID (Port_PinType)4
+#define PORTE_PIN5_ID (Port_PinType)5
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_ID (Port_PinType)0
+#define PORTF_PIN1_ID (Port_PinType)1  /* Led Pin ID */
+#define PORTF_PIN2_ID (Port_PinType)2
+#define PORTF_PIN3_ID (Port_PinType)3
+#define PORTF_PIN4_ID (Port_PinType)4  /* Switch Pin ID */
+
+/****************************************************
+ *     Choosen Configuration By the Tool            *
+ *         "Pins Modes for all Pins"                *
+ *             PORT SWS Page 43                     *
+ ****************************************************/
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN1_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN4_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN5_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN6_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN7_INITIAL_MODE  (Port_PinModeType)0
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN1_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN4_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN5_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN6_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN7_INITIAL_MODE  (Port_PinModeType)0
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN1_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN4_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN5_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN6_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN7_INITIAL_MODE  (Port_PinModeType)0
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN1_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN4_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN5_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN6_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN7_INITIAL_MODE  (Port_PinModeType)0
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN1_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN4_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN5_INITIAL_MODE  (Port_PinModeType)0
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_INITIAL_MODE  (Port_PinModeType)0
+#define PORTF_PIN1_INITIAL_MODE  (Port_PinModeType)0 /* Led Pin Mode is DIO */
+#define PORTF_PIN2_INITIAL_MODE  (Port_PinModeType)0
+#define PORTF_PIN3_INITIAL_MODE  (Port_PinModeType)0
+#define PORTF_PIN4_INITIAL_MODE  (Port_PinModeType)0 /* Switch Pin Mode is DIO */
+
+/****************************************************
+ *     Choosen Configuration By the Tool            *
+ *         "Pins Modes for all Pins"                *
+ *             PORT SWS Page 43                     *
+ ****************************************************/
+
 
 
 

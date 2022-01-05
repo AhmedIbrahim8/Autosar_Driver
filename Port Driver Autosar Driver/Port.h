@@ -135,13 +135,13 @@ typedef enum{
 
 /* Not Autosar Type */
 typedef enum{
-  ZERO,ONE
-}Port_PinInitialValue;
+  PORT_PIN_LEVEL_LOW,PORT_PIN_LEVEL_HIGH
+}Port_PinLevelValue;
 /* Not Autosar Type */
 typedef struct{
   Port_PinDirectionType direction;
   Port_InternalResistor resistor;
-  Port_PinInitialValue initial_value;
+  Port_PinLevelValue initial_value;
   Port_PortType port_num;
   Port_PinType pin_num;
   Port_PinModeType mode;
