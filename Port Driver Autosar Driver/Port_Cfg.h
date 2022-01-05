@@ -46,54 +46,54 @@
  *       of the pin.
  ************************************************************/ 
       /* PORTA has 8-pins */
-#define PORT_PIN0_ID_INDEX    (uint8)0
-#define PORT_PIN1_ID_INDEX    (uint8)1
-#define PORT_PIN2_ID_INDEX    (uint8)2
-#define PORT_PIN3_ID_INDEX    (uint8)3
-#define PORT_PIN4_ID_INDEX    (uint8)4
-#define PORT_PIN5_ID_INDEX    (uint8)5
-#define PORT_PIN6_ID_INDEX    (uint8)6
-#define PORT_PIN7_ID_INDEX    (uint8)7
+#define PORTA_PIN0_ID_INDEX    (uint8)0
+#define PORTA_PIN1_ID_INDEX    (uint8)1
+#define PORTA_PIN2_ID_INDEX    (uint8)2
+#define PORTA_PIN3_ID_INDEX    (uint8)3
+#define PORTA_PIN4_ID_INDEX    (uint8)4
+#define PORTA_PIN5_ID_INDEX    (uint8)5
+#define PORTA_PIN6_ID_INDEX    (uint8)6
+#define PORTA_PIN7_ID_INDEX    (uint8)7
       /* PORTB has 8-pins */
-#define PORT_PIN8_ID_INDEX    (uint8)8
-#define PORT_PIN9_ID_INDEX    (uint8)9
-#define PORT_PIN10_ID_INDEX   (uint8)10
-#define PORT_PIN11_ID_INDEX   (uint8)11
-#define PORT_PIN12_ID_INDEX   (uint8)12
-#define PORT_PIN13_ID_INDEX   (uint8)13
-#define PORT_PIN14_ID_INDEX   (uint8)14
-#define PORT_PIN15_ID_INDEX   (uint8)15
+#define PORTB_PIN0_ID_INDEX    (uint8)8
+#define PORTB_PIN1_ID_INDEX    (uint8)9
+#define PORTB_PIN2_ID_INDEX   (uint8)10
+#define PORTB_PIN3_ID_INDEX   (uint8)11
+#define PORTB_PIN4_ID_INDEX   (uint8)12
+#define PORTB_PIN5_ID_INDEX   (uint8)13
+#define PORTB_PIN6_ID_INDEX   (uint8)14
+#define PORTB_PIN7_ID_INDEX   (uint8)15
       /* PORTC has 8-pins */
-#define PORT_PIN16_ID_INDEX   (uint8)16
-#define PORT_PIN17_ID_INDEX   (uint8)17
-#define PORT_PIN18_ID_INDEX   (uint8)18
-#define PORT_PIN19_ID_INDEX   (uint8)19
-#define PORT_PIN20_ID_INDEX   (uint8)20
-#define PORT_PIN21_ID_INDEX   (uint8)21
-#define PORT_PIN22_ID_INDEX   (uint8)22
-#define PORT_PIN23_ID_INDEX   (uint8)23
+#define PORTC_PIN0_ID_INDEX   (uint8)16
+#define PORTC_PIN1_ID_INDEX   (uint8)17
+#define PORTC_PIN2_ID_INDEX   (uint8)18
+#define PORTC_PIN3_ID_INDEX   (uint8)19
+#define PORTC_PIN4_ID_INDEX   (uint8)20
+#define PORTC_PIN5_ID_INDEX   (uint8)21
+#define PORTC_PIN6_ID_INDEX   (uint8)22
+#define PORTC_PIN7_ID_INDEX   (uint8)23
       /* PORTD has 8-pins */
-#define PORT_PIN24_ID_INDEX   (uint8)24
-#define PORT_PIN25_ID_INDEX   (uint8)25
-#define PORT_PIN26_ID_INDEX   (uint8)26
-#define PORT_PIN27_ID_INDEX   (uint8)27
-#define PORT_PIN28_ID_INDEX   (uint8)28
-#define PORT_PIN29_ID_INDEX   (uint8)29
-#define PORT_PIN30_ID_INDEX   (uint8)30
-#define PORT_PIN31_ID_INDEX   (uint8)31
+#define PORTD_PIN0_ID_INDEX   (uint8)24
+#define PORTD_PIN1_ID_INDEX   (uint8)25
+#define PORTD_PIN2_ID_INDEX   (uint8)26
+#define PORTD_PIN3_ID_INDEX   (uint8)27
+#define PORTD_PIN4_ID_INDEX   (uint8)28
+#define PORTD_PIN5_ID_INDEX   (uint8)29
+#define PORTD_PIN6_ID_INDEX   (uint8)30
+#define PORTD_PIN7_ID_INDEX   (uint8)31
       /* PORTE has 6-pins */
-#define PORT_PIN32_ID_INDEX   (uint8)32
-#define PORT_PIN33_ID_INDEX   (uint8)33
-#define PORT_PIN34_ID_INDEX   (uint8)34
-#define PORT_PIN35_ID_INDEX   (uint8)35
-#define PORT_PIN36_ID_INDEX   (uint8)36
-#define PORT_PIN37_ID_INDEX   (uint8)37
+#define PORTE_PIN0_ID_INDEX   (uint8)32
+#define PORTE_PIN1_ID_INDEX   (uint8)33
+#define PORTE_PIN2_ID_INDEX   (uint8)34
+#define PORTE_PIN3_ID_INDEX   (uint8)35
+#define PORTE_PIN4_ID_INDEX   (uint8)36
+#define PORTE_PIN5_ID_INDEX   (uint8)37
       /* PORTF has 5-pins */
-#define PORT_PIN38_ID_INDEX   (uint8)38
-#define PORT_PIN39_ID_INDEX   (uint8)39
-#define PORT_PIN40_ID_INDEX   (uint8)40
-#define PORT_PIN41_ID_INDEX   (uint8)41
-#define PORT_PIN42_ID_INDEX   (uint8)42
+#define PORTF_PIN0_ID_INDEX   (uint8)38
+#define PORTF_PIN1_ID_INDEX   (uint8)39
+#define PORTF_PIN2_ID_INDEX   (uint8)40
+#define PORTF_PIN3_ID_INDEX   (uint8)41
+#define PORTF_PIN4_ID_INDEX   (uint8)42
 
 
 
