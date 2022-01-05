@@ -462,7 +462,7 @@
 #define PORT_PIN_MODE_CAN                         (uint8)8
 #define PORT_PIN_MODE_ADC                         (uint8)9
 #define PORT_PIN_MODE_NMI                         (uint8)10
-#define PORT_PIN_MODE_ANALOG_COMPARATOR           (uint8)11
+#define PORT_PIN_MODE_COMPARATOR                  (uint8)11
 #define PORT_PIN_MODE_TRACE_DATA                  (uint8)12
 
 #endif

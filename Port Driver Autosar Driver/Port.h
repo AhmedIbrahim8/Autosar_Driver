@@ -180,6 +180,7 @@ typedef struct{
 #define CAN_MODE_3              0x00000003
 #define I2C_MODE                0x00000003
 #define DIO_GPT_MODE            0x00000007
+#define DIGITAL_COMPARATOR_MODE 0x00000009
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

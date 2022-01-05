@@ -1332,216 +1332,6 @@
     "scope": null
   },
   {
-    "ID": "c:Port.c@Port_Channels",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Channels",
-    "location": {
-      "column": "34",
-      "line": "29",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Channels",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Port_Status",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Status",
-    "location": {
-      "column": "7",
-      "line": "31",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Status",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_Init(const Port_ConfigType *)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1626@F@Port_Init@counter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "counter",
-    "location": {
-      "column": "9",
-      "line": "47",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1714@F@Port_Init@Port_Base_Address_Ptr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Base_Address_Ptr",
-    "location": {
-      "column": "20",
-      "line": "49",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Base_Address_Ptr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1830@F@Port_Init@dealy",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "dealy",
-    "location": {
-      "column": "18",
-      "line": "51",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "dealy",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_SetPinDirection",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
-    "location": {
-      "column": "6",
-      "line": "293",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_SetPinDirection",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@15121@F@Port_SetPinDirection@Port_Base_Address_Ptr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Base_Address_Ptr",
-    "location": {
-      "column": "20",
-      "line": "297",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Base_Address_Ptr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@15224@F@Port_SetPinDirection@error",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "error",
-    "location": {
-      "column": "11",
-      "line": "299",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "error",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_RefreshPortDirection",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_RefreshPortDirection(void)",
-    "location": {
-      "column": "6",
-      "line": "429",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_RefreshPortDirection",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@19693@F@Port_RefreshPortDirection@Port_Base_Address_Ptr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Base_Address_Ptr",
-    "location": {
-      "column": "20",
-      "line": "432",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Base_Address_Ptr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@19816@F@Port_RefreshPortDirection@counter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "counter",
-    "location": {
-      "column": "9",
-      "line": "434",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@19884@F@Port_RefreshPortDirection@error",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "error",
-    "location": {
-      "column": "11",
-      "line": "436",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "error",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_GetVersionInfo",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
-    "location": {
-      "column": "6",
-      "line": "549",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_GetVersionInfo",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_SetPinMode",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
-    "location": {
-      "column": "6",
-      "line": "595",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_SetPinMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:Port.h@306@macro@PORT_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -2476,13 +2266,27 @@
     "scope": null
   },
   {
+    "ID": "c:Port.h@7000@macro@DIGITAL_COMPARATOR_MODE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIGITAL_COMPARATOR_MODE",
+    "location": {
+      "column": "9",
+      "line": "183",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
+    },
+    "name": "DIGITAL_COMPARATOR_MODE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Port_Init",
     "What": "Function",
     "defdec": "Dec",
     "display": "void Port_Init(const Port_ConfigType *)",
     "location": {
       "column": "6",
-      "line": "189",
+      "line": "190",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_Init",
@@ -2496,7 +2300,7 @@
     "display": "void Port_Init(const Port_ConfigType *)",
     "location": {
       "column": "6",
-      "line": "189",
+      "line": "190",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_Init",
@@ -2510,7 +2314,7 @@
     "display": "void Port_RefreshPortDirection(void)",
     "location": {
       "column": "6",
-      "line": "194",
+      "line": "195",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_RefreshPortDirection",
@@ -2524,7 +2328,7 @@
     "display": "void Port_RefreshPortDirection(void)",
     "location": {
       "column": "6",
-      "line": "194",
+      "line": "195",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_RefreshPortDirection",
@@ -2538,7 +2342,7 @@
     "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
     "location": {
       "column": "6",
-      "line": "202",
+      "line": "203",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_GetVersionInfo",
@@ -2552,7 +2356,7 @@
     "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
     "location": {
       "column": "6",
-      "line": "202",
+      "line": "203",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_GetVersionInfo",
@@ -2566,7 +2370,7 @@
     "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
     "location": {
       "column": "6",
-      "line": "208",
+      "line": "209",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_SetPinMode",
@@ -2580,7 +2384,7 @@
     "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
     "location": {
       "column": "6",
-      "line": "208",
+      "line": "209",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_SetPinMode",
@@ -2594,7 +2398,7 @@
     "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
     "location": {
       "column": "6",
-      "line": "215",
+      "line": "216",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_SetPinDirection",
@@ -2608,7 +2412,7 @@
     "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
     "location": {
       "column": "6",
-      "line": "215",
+      "line": "216",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_SetPinDirection",
@@ -2622,11 +2426,221 @@
     "display": "Port_Configuration",
     "location": {
       "column": "30",
-      "line": "222",
+      "line": "223",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_Configuration",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@Port_Channels",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Channels",
+    "location": {
+      "column": "34",
+      "line": "29",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Channels",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Port_Status",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Status",
+    "location": {
+      "column": "7",
+      "line": "31",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Status",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_Init(const Port_ConfigType *)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1626@F@Port_Init@index",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "index",
+    "location": {
+      "column": "9",
+      "line": "47",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "index",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1712@F@Port_Init@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "49",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1828@F@Port_Init@dealy",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "dealy",
+    "location": {
+      "column": "18",
+      "line": "51",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "dealy",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_SetPinDirection",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
+    "location": {
+      "column": "6",
+      "line": "326",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_SetPinDirection",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@17935@F@Port_SetPinDirection@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "330",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@18038@F@Port_SetPinDirection@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "11",
+      "line": "332",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_RefreshPortDirection",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_RefreshPortDirection(void)",
+    "location": {
+      "column": "6",
+      "line": "462",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_RefreshPortDirection",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@22507@F@Port_RefreshPortDirection@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "465",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@22630@F@Port_RefreshPortDirection@counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "counter",
+    "location": {
+      "column": "9",
+      "line": "467",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@22698@F@Port_RefreshPortDirection@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "11",
+      "line": "469",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_GetVersionInfo",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
+    "location": {
+      "column": "6",
+      "line": "582",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_GetVersionInfo",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_SetPinMode",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
+    "location": {
+      "column": "6",
+      "line": "628",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_SetPinMode",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -7166,16 +7180,16 @@
     "scope": null
   },
   {
-    "ID": "c:Port_Cfg.h@21367@macro@PORT_PIN_MODE_ANALOG_COMPARATOR",
+    "ID": "c:Port_Cfg.h@21367@macro@PORT_PIN_MODE_COMPARATOR",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "PORT_PIN_MODE_ANALOG_COMPARATOR",
+    "display": "PORT_PIN_MODE_COMPARATOR",
     "location": {
       "column": "9",
       "line": "465",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
     },
-    "name": "PORT_PIN_MODE_ANALOG_COMPARATOR",
+    "name": "PORT_PIN_MODE_COMPARATOR",
     "origin": "user_include",
     "scope": null
   },
