@@ -434,18 +434,35 @@
 
 
 /* As Required in PORT SWS in page 44 */
-/* Note: DIO mode & ADC mode are the same mode number so, we need
-         to differentiate between them                           */
-#define PORT_PIN_MODE_DIO      (uint8)0
-#define PORT_PIN_MODE_CAN      (uint8)1
-#define PORT_PIN_MODE_SPI      (uint8)2
-#define PORT_PIN_MODE_FLEXRAY  (uint8)3
-#define PORT_PIN_MODE_DIO_WDG  (uint8)4
-#define PORT_PIN_MODE_DIO_GPT  (uint8)5
-#define PORT_PIN_MODE_ICU      (uint8)6
-#define PORT_PIN_MODE_LIN      (uint8)7
-#define PORT_PIN_MODE_MEM      (uint8)8
-#define PORT_PIN_MODE_PWM      (uint8)9
-#define PORT_PIN_MODE_ADC      (uint8)10
+/* Note: DIO mode & ADC mode are the same mode number so, we need        *
+         to differentiate between them in the code                       *
+ * In TivaC Data Sheet Page (1330 to 1352), there is the multiple modes  *
+ * Supported by TivaC Which are:                                         *
+ *                              - UART Mode                              *
+ *                              - DIO Mode                               *
+ *                              - SPI Mode                               *
+ *                              - I2C Mode                               *
+ *                              - ICU Mode-Capture Compare PWM pins(CCP) *
+ *                              - QEI Mode(Quadrature Encoder Interface) *
+ *                              - PWM Mode                               *
+ *                              - USB Mode                               *
+ *                              - CAN Mode                               *
+ *                              - ADC Mode                               *
+ *                              - Non Maskable Interrupt Mode(NMI)       *
+ *                              - Analog comparator MODE                 *
+ *                              - Trace Data Mode                        */
+#define PORT_PIN_MODE_DIO                         (uint8)0
+#define PORT_PIN_MODE_UART                        (uint8)1
+#define PORT_PIN_MODE_SPI                         (uint8)2
+#define PORT_PIN_MODE_I2C                         (uint8)3
+#define PORT_PIN_MODE_DIO_GPT                     (uint8)4
+#define PORT_PIN_MODE_QEI                         (uint8)5
+#define PORT_PIN_MODE_PWM                         (uint8)6
+#define PORT_PIN_MODE_USB                         (uint8)7
+#define PORT_PIN_MODE_CAN                         (uint8)8
+#define PORT_PIN_MODE_ADC                         (uint8)9
+#define PORT_PIN_MODE_NMI                         (uint8)10
+#define PORT_PIN_MODE_ANALOG_COMPARATOR           (uint8)11
+#define PORT_PIN_MODE_TRACE_DATA                  (uint8)12
 
 #endif

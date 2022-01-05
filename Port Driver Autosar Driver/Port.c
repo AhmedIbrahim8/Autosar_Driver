@@ -210,12 +210,52 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
          *     - 1 at Alternative Register                                     *
          *     - 1 at Degital Register (All Pin Modes are digital except ADC)  *
          *     - 0 at Analog Register                                          *
-         *     -                       */
+         *     - switch case to specify which mode of them                     */
       default:
         SET_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[counter].pin_num);
         SET_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[counter].pin_num);
         CLEAR_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[counter].pin_num);
-        
+        /* Switch Case to specify the mode */
+        switch(Port_Channels[counter].mode)
+        {
+          /* If the mode is CAN                               *
+           * Note : - Can Mode Number is 3 at PF0 and PF3     *
+           *        - Can Mode Number is 8 at the rest        */
+        case PORT_PIN_MODE_CAN:
+          /* Number 3(CAN_MODE_3) should be inserted at the 4-bits of the pin number if PF0 or PF3 */
+          if((counter == PORTF_PIN0_ID_INDEX) || (counter == PORTF_PIN3_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[counter].pin_num)*BIT_SHIFT)))\
+          |(CAN_MODE_3<<((Port_Channels[counter].pin_num)*BIT_SHIFT));
+          }
+          /* Number 8(CAN_MODE_8) should be inserted at the 4-bits of the pin number if pin index is something else */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[counter].pin_num)*BIT_SHIFT)))\
+          |(CAN_MODE_8<<((Port_Channels[counter].pin_num)*BIT_SHIFT));
+          }
+          break;
+          /* If the mode is I2C, Number 3(I2C_MODE) should be inserted at the 4-bit of the pin number */
+        case PORT_PIN_MODE_I2C:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[counter].pin_num)*BIT_SHIFT)))\
+          |(I2C_MODE<<((Port_Channels[counter].pin_num)*BIT_SHIFT));
+          break;
+          /* It shall be used under control of the general purpose timer driver             *
+           * Example : ICU(INPUT CAPTURE UNIT) which name is Capture Compare PWM pins (CCP) *
+           * T0CCP0 ----> T3CCP1 & WT0CCP0 ----> WT5CCP1                                    *
+           * Number 7(DIO_GPT_MODE) should be inserted at the 4-bit of the pin number       */
+        case PORT_PIN_MODE_DIO_GPT:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[counter].pin_num)*BIT_SHIFT)))\
+          |(DIO_GPT_MODE<<((Port_Channels[counter].pin_num)*BIT_SHIFT));
+          break;
+          
+          
+          
+        }
         
         
         break;

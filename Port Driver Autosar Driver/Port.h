@@ -176,6 +176,10 @@ typedef struct{
 #define SPECIAL_PIN_PF0         (0U)
 #define CONTROL_REGISTER_MASK  0x0000000F
 #define BIT_SHIFT               (4U)
+#define CAN_MODE_8              0x00000008
+#define CAN_MODE_3              0x00000003
+#define I2C_MODE                0x00000003
+#define DIO_GPT_MODE            0x00000007
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/
