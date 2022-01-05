@@ -23,6 +23,7 @@
 #error "The Autosar Version of Det.h doesn't match the version of Port.h.h"
 
 #endif
+#endif
 
 
 STATIC const Port_ConfigChannel *Port_Channels =NULL_PTR;
@@ -160,7 +161,7 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         /* if initial value of the pin equal one */
         else if(Port_Channels[counter].initial_value == ONE)
         {
-          SET_BIT(,Port_Channels[counter].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DATA_REG_OFFSET),Port_Channels[counter].pin_num);
         }
         /* Misra Rules */
         else
@@ -201,7 +202,7 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
       case PORT_PIN_MODE_ADC:
         CLEAR_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[counter].pin_num);
         CLEAR_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[counter].pin_num);
-        SET_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET);
+        SET_BIT(*(volatile uint8 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[counter].pin_num);
         *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
        (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[counter].pin_num)*BIT_SHIFT));
         break;
@@ -276,7 +277,7 @@ void Port_SetPinDirection( Port_PinType Pin,
   }
   /* Checking if the pin equal or greater than the Port Configured Channels, it will*
    * report a det error and change the state of the error to be TRUE.               */
-  if(pin>= PORT_CONFIGURED_PINS)
+  if(Pin>= PORT_CONFIGURED_PINS)
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
@@ -314,7 +315,7 @@ void Port_SetPinDirection( Port_PinType Pin,
   if(error==FALSE)
   {
     /* To specify the GPIO Base Address By the port num at the specified Pin Index */
-   switch(Port_Channels[pin].port_num)
+   switch(Port_Channels[Pin].port_num)
       {
         /* PORTA Base Address */
       case PORTA_ID:
@@ -442,6 +443,3 @@ void Port_SetPinMode( Port_PinType Pin,
 
 
 
-
-
-#endif
