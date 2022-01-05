@@ -433,24 +433,24 @@
 
 
 
-/* As Required in PORT SWS in page 44 */
-/* Note: DIO mode & ADC mode are the same mode number so, we need        *
-         to differentiate between them in the code                       *
- * In TivaC Data Sheet Page (1330 to 1352), there is the multiple modes  *
- * Supported by TivaC Which are:                                         *
- *                              - UART Mode                              *
- *                              - DIO Mode                               *
- *                              - SPI Mode                               *
- *                              - I2C Mode                               *
- *                              - ICU Mode-Capture Compare PWM pins(CCP) *
- *                              - QEI Mode(Quadrature Encoder Interface) *
- *                              - PWM Mode                               *
- *                              - USB Mode                               *
- *                              - CAN Mode                               *
- *                              - ADC Mode                               *
- *                              - Non Maskable Interrupt Mode(NMI)       *
- *                              - Analog comparator MODE                 *
- *                              - Trace Data Mode                        */
+/* As Required in PORT SWS in page 44                                          */
+/* Note: DIO mode & ADC mode are the same mode number so, we need              *
+         to differentiate between them in the code                             *
+ * In TivaC Data Sheet Page (1330 to 1352), there is the multiple modes        *
+ * Supported by TivaC Which are:                                               *
+ *                              - UART Mode                                    *
+ *                              - DIO Mode                                     *
+ *                              - SPI Mode                                     *
+ *                              - I2C Mode                                     *
+ *                              - ICU Mode-Capture Compare PWM pins(CCP)       *
+ *                              - QEI Mode(Quadrature Encoder Interface)       *
+ *                              - PWM Mode                                     *
+ *                              - USB Mode (Analog signal or Digital)          *
+ *                              - CAN Mode                                     *
+ *                              - ADC Mode (Analog)                            *
+ *                              - Non Maskable Interrupt Mode(NMI)             *
+ *                              - Analog comparator MODE (Analog or Digital)   *
+ *                              - Trace Data Mode                              */
 #define PORT_PIN_MODE_DIO                         (uint8)0
 #define PORT_PIN_MODE_UART                        (uint8)1
 #define PORT_PIN_MODE_SPI                         (uint8)2
