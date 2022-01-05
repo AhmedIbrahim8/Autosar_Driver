@@ -428,7 +428,13 @@ void Port_RefreshPortDirection( void )
   {
     for(counter=FIRST_LOOP;counter<PORT_CONFIGURED_PINS;counter++)
     {
-      switch(Port_Channels[counter].port_num)
+      /* - Port Driver SWS Page (34)                                                                  *
+           [PORT061]: The function Port_RefreshPortDirection shall exclude those port pins            *
+                      from refreshing that are configured as ‘pin direction changeable during runtime *
+       * Check if the pin direction is changeable, it will not be refreshed                           */
+      if(Port_Channels[counter].direction_changeable ==FALSE)
+      {
+        switch(Port_Channels[counter].port_num)
       {
         /* PORTA Base Address */
       case PORTA_ID:
@@ -472,6 +478,15 @@ void Port_RefreshPortDirection( void )
         /* No Action Needed */
         break;
       }/* End Of Switch Case */
+      
+      }/* End of if condition */
+      
+      /* Misra Rules */
+      else
+      {
+        /* No Action Nedded */
+      }
+      
       
     }/* End Of For Loop */
     
