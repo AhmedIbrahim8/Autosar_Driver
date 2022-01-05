@@ -145,7 +145,7 @@ typedef struct{
   Port_PortType port_num;
   Port_PinType pin_num;
   Port_PinModeType mode;
-  boolean pin_changeable;
+  boolean direction_changeable;
   boolean mode_changeable;
 }Port_ConfigChannel;
 
@@ -174,6 +174,8 @@ typedef struct{
 #define MAGIC_NUMBER        (0x4C4F434B)
 #define SPECIAL_PIN_PC7         (7U)
 #define SPECIAL_PIN_PF0         (0U)
+#define CONTROL_REGISTER_MASK  0x0000000F
+#define BIT_SHIFT               (4U)
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/
