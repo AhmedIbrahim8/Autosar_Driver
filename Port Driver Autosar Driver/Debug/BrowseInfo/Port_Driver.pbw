@@ -2606,16 +2606,16 @@
     "scope": null
   },
   {
-    "ID": "c:Port_Cfg.h@3916@macro@PORT_PIN_MODE_I2C",
+    "ID": "c:Port_Cfg.h@3916@macro@PORT_PIN_MODE_FLEXRAY",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "PORT_PIN_MODE_I2C",
+    "display": "PORT_PIN_MODE_FLEXRAY",
     "location": {
       "column": "9",
       "line": "107",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
     },
-    "name": "PORT_PIN_MODE_I2C",
+    "name": "PORT_PIN_MODE_FLEXRAY",
     "origin": "user_include",
     "scope": null
   },

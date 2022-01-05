@@ -104,7 +104,7 @@
 #define PORT_PIN_MODE_DIO      (uint8)0
 #define PORT_PIN_MODE_CAN      (uint8)1
 #define PORT_PIN_MODE_SPI      (uint8)2
-#define PORT_PIN_MODE_I2C      (uint8)3
+#define PORT_PIN_MODE_FLEXRAY  (uint8)3
 #define PORT_PIN_MODE_DIO_WDG  (uint8)4
 #define PORT_PIN_MODE_DIO_GPT  (uint8)5
 #define PORT_PIN_MODE_ICU      (uint8)6
