@@ -181,6 +181,7 @@ typedef struct{
 #define I2C_MODE                0x00000003
 #define DIO_GPT_MODE            0x00000007
 #define DIGITAL_COMPARATOR_MODE 0x00000009
+#define USB_DIGITAL_MODE        0x00000008
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

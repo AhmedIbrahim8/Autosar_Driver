@@ -238,6 +238,38 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
          (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT));
         }
         break;
+        /* There are 4-options which are :                               *
+         *    - (USB0epen & USB0pflt) are Digital signals                *
+         *    - ( USB0DM  &  USB0DP ) are Analog signals                 *
+         * If PD2 or PD3 or PF4 or PC6 or PC7: Digital Signal            *
+         * If PD4 or PD5 : Analog Signal                                 */
+      case PORT_PIN_MODE_USB:
+        /*    Analog :  - 0 at Alternate Register         *
+         *              - 1 at Analog Register            *
+         *              - 0 at Digiral Register           *
+         *              - Numer 0 at Control Register     */
+        if((index == PORTD_PIN4_ID_INDEX) || (index == PORTD_PIN5_ID_INDEX))
+        {
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[index].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[index].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[index].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
+         (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+        }
+        /*   Digital :  - 1 at Alternate Register                           *
+         *              - 0 at Analog Register                              *
+         *              - 1 at Digiral Register                             *
+         *              - Numer 8(USB_DIGITAL_MODE) at Control Register     */
+        else
+        {
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[index].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[index].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[index].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+          |(USB_DIGITAL_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+        }
+        break;
           
         /* If Pin Mode is something else                                       *
          *     - 1 at Alternative Register                                     *
