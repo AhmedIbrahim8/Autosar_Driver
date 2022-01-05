@@ -398,9 +398,92 @@ void Port_SetPinDirection( Port_PinType Pin,
 ************************************************************************************/
 void Port_RefreshPortDirection( void )
 {
+  /* Local variable to store the base address of the GPIO register */
+  volatile uint32 *Port_Base_Address_Ptr= NULL_PTR;
+  /* local variable used to loop of the configuration array       */
+  uint8 counter;
+  /* Local Variable to store the error status */
+  boolean error= FALSE;
+  /* Det error checking code will be removed if it is off at the configuration tool */
+#if(PORT_DEV_ERROR_DETECT ==STD_HIGH)
+  /* Checking the status of the port driver. if it is uninitialized it will report  *
+   * a det error and change the state of the error to TRUE.                         */
+  if(Port_Status==PORT_NOT_INITIALIZED)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_REFRESH_PORT_DIRECTION_SID,
+                    PORT_E_UNINIT);
+    /* Error is happened so, it will be TRUE */
+    error=TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed*/
+  }
+  
+#endif
+  if(error==FALSE)
+  {
+    for(counter=FIRST_LOOP;counter<PORT_CONFIGURED_PINS;counter++)
+    {
+      switch(Port_Channels[counter].port_num)
+      {
+        /* PORTA Base Address */
+      case PORTA_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTA_BASE_ADDRESS;
+        break;
+        /* PORTB Base Address */
+      case PORTB_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTB_BASE_ADDRESS;
+        break;
+        /* PORTC Base Address */
+      case PORTC_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTC_BASE_ADDRESS;
+        break;
+        /* PORTD Base Address */
+      case PORTD_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTD_BASE_ADDRESS;
+        break;
+        /* PORTE Base Address */
+      case PORTE_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTE_BASE_ADDRESS;
+        break;
+        /* PORTF Base Address */
+      case PORTF_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTF_BASE_ADDRESS;
+        break;
+        /* (Misra Rules) */
+      default:
+        /* NO Action is needed (Misra Rules)*/
+        break;
+      }/* End Of Switch case */
+      switch(Port_Channels[counter].direction)
+      {
+      case PORT_PIN_IN:
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        break;
+      case PORT_PIN_OUT:
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        break;
+        /* Misra Rules */
+      default:
+        /* No Action Needed */
+        break;
+      }/* End Of Switch Case */
+      
+    }/* End Of For Loop */
+    
+  }/* End Of if condition */
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
   
   
-}
+}/* End Of Refresh function */
 
 /************************************************************************************
 * Service Name: Port_GetVersionInfo

@@ -1332,6 +1332,1392 @@
     "scope": null
   },
   {
+    "ID": "c:Port.c@Port_Channels",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Channels",
+    "location": {
+      "column": "34",
+      "line": "29",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Channels",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Port_Status",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Status",
+    "location": {
+      "column": "7",
+      "line": "31",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Status",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_Init(const Port_ConfigType *)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1626@F@Port_Init@counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "counter",
+    "location": {
+      "column": "9",
+      "line": "47",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1714@F@Port_Init@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "49",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@1830@F@Port_Init@dealy",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "dealy",
+    "location": {
+      "column": "18",
+      "line": "51",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "dealy",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_SetPinDirection",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
+    "location": {
+      "column": "6",
+      "line": "253",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_SetPinDirection",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@12352@F@Port_SetPinDirection@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "257",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@12455@F@Port_SetPinDirection@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "11",
+      "line": "259",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_RefreshPortDirection",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_RefreshPortDirection(void)",
+    "location": {
+      "column": "6",
+      "line": "399",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_RefreshPortDirection",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@16942@F@Port_RefreshPortDirection@Port_Base_Address_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Base_Address_Ptr",
+    "location": {
+      "column": "20",
+      "line": "402",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_Base_Address_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@17065@F@Port_RefreshPortDirection@counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "counter",
+    "location": {
+      "column": "9",
+      "line": "404",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port.c@17133@F@Port_RefreshPortDirection@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "11",
+      "line": "406",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_GetVersionInfo",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
+    "location": {
+      "column": "6",
+      "line": "500",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_GetVersionInfo",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Port_SetPinMode",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
+    "location": {
+      "column": "6",
+      "line": "520",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
+    },
+    "name": "Port_SetPinMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@357@macro@PORT_REGS_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_REGS_H",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_REGS_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@421@macro@GPIO_PORTA_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTA_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTA_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@475@macro@GPIO_PORTB_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTB_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTB_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@529@macro@GPIO_PORTC_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTC_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTC_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@583@macro@GPIO_PORTD_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTD_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "22",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTD_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@637@macro@GPIO_PORTE_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTE_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTE_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@691@macro@GPIO_PORTF_BASE_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTF_BASE_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "GPIO_PORTF_BASE_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@788@macro@PORT_DATA_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_DATA_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "28",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_DATA_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@837@macro@PORT_DIR_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_DIR_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "29",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_DIR_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@886@macro@PORT_ALT_FUNC_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_ALT_FUNC_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "30",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_ALT_FUNC_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@935@macro@PORT_PULL_UP_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PULL_UP_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_PULL_UP_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@984@macro@PORT_PULL_DOWN_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PULL_DOWN_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "32",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_PULL_DOWN_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1033@macro@PORT_DIGITAL_ENABLE_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_DIGITAL_ENABLE_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_DIGITAL_ENABLE_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1082@macro@PORT_LOCK_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_LOCK_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_LOCK_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1131@macro@PORT_COMMIT_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_COMMIT_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_COMMIT_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1180@macro@PORT_ANALOG_MODE_SEL_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_ANALOG_MODE_SEL_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "36",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_ANALOG_MODE_SEL_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1229@macro@PORT_CTL_REG_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CTL_REG_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "37",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "PORT_CTL_REG_OFFSET",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Regs.h@1342@macro@SYSCTL_REGCGC2_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SYSCTL_REGCGC2_REG",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
+    },
+    "name": "SYSCTL_REGCGC2_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@397@macro@PORT_CFG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_H",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@450@macro@PORT_CFG_SW_MAJOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_SW_MAJOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_SW_MAJOR_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@500@macro@PORT_CFG_SW_MINOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_SW_MINOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_SW_MINOR_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@550@macro@PORT_CFG_SW_PATCH_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_SW_PATCH_VERSION",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_SW_PATCH_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@637@macro@PORT_CFG_AR_RELEASE_MAJOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_AR_RELEASE_MAJOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_AR_RELEASE_MAJOR_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@687@macro@PORT_CFG_AR_RELEASE_MINOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_AR_RELEASE_MINOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_AR_RELEASE_MINOR_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@737@macro@PORT_CFG_AR_RELEASE_PATCH_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CFG_AR_RELEASE_PATCH_VERSION",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CFG_AR_RELEASE_PATCH_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@855@macro@PORT_DEV_ERROR_DETECT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_DEV_ERROR_DETECT",
+    "location": {
+      "column": "9",
+      "line": "28",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_DEV_ERROR_DETECT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@971@macro@PORT_SET_PIN_DIRECTION_API",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_SET_PIN_DIRECTION_API",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_SET_PIN_DIRECTION_API",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1087@macro@PORT_SET_PIN_MODE_API",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_SET_PIN_MODE_API",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_SET_PIN_MODE_API",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1203@macro@PORT_VERSION_INFO_API",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_VERSION_INFO_API",
+    "location": {
+      "column": "9",
+      "line": "37",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_VERSION_INFO_API",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1295@macro@PORT_CONFIGURED_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_CONFIGURED_PINS",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_CONFIGURED_PINS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1704@macro@PORT_PIN0_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN0_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "49",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN0_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1744@macro@PORT_PIN1_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN1_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "50",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN1_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1784@macro@PORT_PIN2_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN2_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN2_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1824@macro@PORT_PIN3_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN3_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "52",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN3_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1864@macro@PORT_PIN4_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN4_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "53",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN4_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1904@macro@PORT_PIN5_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN5_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "54",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN5_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1944@macro@PORT_PIN6_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN6_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN6_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@1984@macro@PORT_PIN7_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN7_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "56",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN7_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2054@macro@PORT_PIN8_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN8_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "58",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN8_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2094@macro@PORT_PIN9_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN9_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "59",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN9_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2134@macro@PORT_PIN10_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN10_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "60",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN10_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2175@macro@PORT_PIN11_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN11_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "61",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN11_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2216@macro@PORT_PIN12_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN12_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "62",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN12_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2257@macro@PORT_PIN13_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN13_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "63",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN13_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2298@macro@PORT_PIN14_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN14_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "64",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN14_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2339@macro@PORT_PIN15_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN15_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "65",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN15_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2410@macro@PORT_PIN16_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN16_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "67",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN16_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2451@macro@PORT_PIN17_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN17_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "68",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN17_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2492@macro@PORT_PIN18_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN18_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN18_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2533@macro@PORT_PIN19_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN19_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "70",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN19_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2574@macro@PORT_PIN20_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN20_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "71",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN20_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2615@macro@PORT_PIN21_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN21_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "72",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN21_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2656@macro@PORT_PIN22_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN22_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "73",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN22_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2697@macro@PORT_PIN23_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN23_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "74",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN23_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2768@macro@PORT_PIN24_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN24_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "76",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN24_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2809@macro@PORT_PIN25_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN25_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "77",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN25_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2850@macro@PORT_PIN26_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN26_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "78",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN26_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2891@macro@PORT_PIN27_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN27_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "79",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN27_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2932@macro@PORT_PIN28_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN28_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "80",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN28_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@2973@macro@PORT_PIN29_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN29_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "81",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN29_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3014@macro@PORT_PIN30_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN30_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "82",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN30_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3055@macro@PORT_PIN31_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN31_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "83",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN31_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3126@macro@PORT_PIN32_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN32_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "85",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN32_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3167@macro@PORT_PIN33_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN33_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN33_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3208@macro@PORT_PIN34_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN34_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "87",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN34_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3249@macro@PORT_PIN35_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN35_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "88",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN35_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3290@macro@PORT_PIN36_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN36_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "89",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN36_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3331@macro@PORT_PIN37_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN37_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "90",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN37_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3402@macro@PORT_PIN38_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN38_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "92",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN38_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3443@macro@PORT_PIN39_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN39_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "93",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN39_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3484@macro@PORT_PIN40_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN40_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "94",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN40_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3525@macro@PORT_PIN41_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN41_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "95",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN41_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3566@macro@PORT_PIN42_ID_INDEX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN42_ID_INDEX",
+    "location": {
+      "column": "9",
+      "line": "96",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN42_ID_INDEX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3793@macro@PORT_PIN_MODE_DIO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_DIO",
+    "location": {
+      "column": "9",
+      "line": "104",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_DIO",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3834@macro@PORT_PIN_MODE_CAN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_CAN",
+    "location": {
+      "column": "9",
+      "line": "105",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_CAN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3875@macro@PORT_PIN_MODE_SPI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_SPI",
+    "location": {
+      "column": "9",
+      "line": "106",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_SPI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3916@macro@PORT_PIN_MODE_I2C",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_I2C",
+    "location": {
+      "column": "9",
+      "line": "107",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_I2C",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3957@macro@PORT_PIN_MODE_DIO_WDG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_DIO_WDG",
+    "location": {
+      "column": "9",
+      "line": "108",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_DIO_WDG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@3998@macro@PORT_PIN_MODE_DIO_GPT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_DIO_GPT",
+    "location": {
+      "column": "9",
+      "line": "109",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_DIO_GPT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@4039@macro@PORT_PIN_MODE_ICU",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_ICU",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_ICU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@4080@macro@PORT_PIN_MODE_LIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_LIN",
+    "location": {
+      "column": "9",
+      "line": "111",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_LIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@4121@macro@PORT_PIN_MODE_MEM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_MEM",
+    "location": {
+      "column": "9",
+      "line": "112",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_MEM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@4162@macro@PORT_PIN_MODE_PWM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_PWM",
+    "location": {
+      "column": "9",
+      "line": "113",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_PWM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Port_Cfg.h@4203@macro@PORT_PIN_MODE_ADC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PORT_PIN_MODE_ADC",
+    "location": {
+      "column": "9",
+      "line": "114",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
+    },
+    "name": "PORT_PIN_MODE_ADC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:Port.h@306@macro@PORT_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -2360,1350 +3746,6 @@
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
     "name": "Port_Configuration",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@Port_Channels",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Channels",
-    "location": {
-      "column": "34",
-      "line": "29",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Channels",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Port_Status",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Status",
-    "location": {
-      "column": "7",
-      "line": "31",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Status",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_Init(const Port_ConfigType *)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1626@F@Port_Init@counter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "counter",
-    "location": {
-      "column": "9",
-      "line": "47",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1714@F@Port_Init@Port_Base_Address_Ptr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Base_Address_Ptr",
-    "location": {
-      "column": "20",
-      "line": "49",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Base_Address_Ptr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@1830@F@Port_Init@dealy",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "dealy",
-    "location": {
-      "column": "18",
-      "line": "51",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "dealy",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_SetPinDirection",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_SetPinDirection(Port_PinType, Port_PinDirectionType)",
-    "location": {
-      "column": "6",
-      "line": "253",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_SetPinDirection",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@12352@F@Port_SetPinDirection@Port_Base_Address_Ptr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Port_Base_Address_Ptr",
-    "location": {
-      "column": "20",
-      "line": "257",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_Base_Address_Ptr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port.c@12455@F@Port_SetPinDirection@error",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "error",
-    "location": {
-      "column": "11",
-      "line": "259",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "error",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_RefreshPortDirection",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_RefreshPortDirection(void)",
-    "location": {
-      "column": "6",
-      "line": "399",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_RefreshPortDirection",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_GetVersionInfo",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_GetVersionInfo(Std_VersionInfoType *)",
-    "location": {
-      "column": "6",
-      "line": "417",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_GetVersionInfo",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Port_SetPinMode",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Port_SetPinMode(Port_PinType, Port_PinModeType)",
-    "location": {
-      "column": "6",
-      "line": "437",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.c"
-    },
-    "name": "Port_SetPinMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@397@macro@PORT_CFG_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_H",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@450@macro@PORT_CFG_SW_MAJOR_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_SW_MAJOR_VERSION",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_SW_MAJOR_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@500@macro@PORT_CFG_SW_MINOR_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_SW_MINOR_VERSION",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_SW_MINOR_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@550@macro@PORT_CFG_SW_PATCH_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_SW_PATCH_VERSION",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_SW_PATCH_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@637@macro@PORT_CFG_AR_RELEASE_MAJOR_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_AR_RELEASE_MAJOR_VERSION",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_AR_RELEASE_MAJOR_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@687@macro@PORT_CFG_AR_RELEASE_MINOR_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_AR_RELEASE_MINOR_VERSION",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_AR_RELEASE_MINOR_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@737@macro@PORT_CFG_AR_RELEASE_PATCH_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CFG_AR_RELEASE_PATCH_VERSION",
-    "location": {
-      "column": "9",
-      "line": "25",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CFG_AR_RELEASE_PATCH_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@855@macro@PORT_DEV_ERROR_DETECT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_DEV_ERROR_DETECT",
-    "location": {
-      "column": "9",
-      "line": "28",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_DEV_ERROR_DETECT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@971@macro@PORT_SET_PIN_DIRECTION_API",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_SET_PIN_DIRECTION_API",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_SET_PIN_DIRECTION_API",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1087@macro@PORT_SET_PIN_MODE_API",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_SET_PIN_MODE_API",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_SET_PIN_MODE_API",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1203@macro@PORT_VERSION_INFO_API",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_VERSION_INFO_API",
-    "location": {
-      "column": "9",
-      "line": "37",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_VERSION_INFO_API",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1295@macro@PORT_CONFIGURED_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CONFIGURED_PINS",
-    "location": {
-      "column": "9",
-      "line": "40",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_CONFIGURED_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1704@macro@PORT_PIN0_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN0_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "49",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN0_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1744@macro@PORT_PIN1_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN1_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "50",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN1_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1784@macro@PORT_PIN2_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN2_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "51",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN2_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1824@macro@PORT_PIN3_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN3_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "52",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN3_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1864@macro@PORT_PIN4_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN4_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "53",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN4_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1904@macro@PORT_PIN5_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN5_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "54",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN5_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1944@macro@PORT_PIN6_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN6_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "55",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN6_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@1984@macro@PORT_PIN7_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN7_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "56",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN7_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2054@macro@PORT_PIN8_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN8_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "58",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN8_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2094@macro@PORT_PIN9_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN9_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "59",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN9_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2134@macro@PORT_PIN10_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN10_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "60",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN10_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2175@macro@PORT_PIN11_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN11_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "61",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN11_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2216@macro@PORT_PIN12_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN12_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "62",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN12_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2257@macro@PORT_PIN13_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN13_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "63",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN13_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2298@macro@PORT_PIN14_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN14_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "64",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN14_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2339@macro@PORT_PIN15_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN15_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "65",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN15_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2410@macro@PORT_PIN16_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN16_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "67",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN16_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2451@macro@PORT_PIN17_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN17_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "68",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN17_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2492@macro@PORT_PIN18_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN18_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN18_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2533@macro@PORT_PIN19_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN19_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "70",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN19_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2574@macro@PORT_PIN20_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN20_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "71",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN20_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2615@macro@PORT_PIN21_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN21_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "72",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN21_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2656@macro@PORT_PIN22_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN22_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "73",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN22_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2697@macro@PORT_PIN23_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN23_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "74",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN23_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2768@macro@PORT_PIN24_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN24_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "76",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN24_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2809@macro@PORT_PIN25_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN25_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "77",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN25_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2850@macro@PORT_PIN26_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN26_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "78",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN26_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2891@macro@PORT_PIN27_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN27_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "79",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN27_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2932@macro@PORT_PIN28_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN28_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "80",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN28_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@2973@macro@PORT_PIN29_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN29_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "81",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN29_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3014@macro@PORT_PIN30_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN30_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "82",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN30_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3055@macro@PORT_PIN31_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN31_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "83",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN31_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3126@macro@PORT_PIN32_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN32_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "85",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN32_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3167@macro@PORT_PIN33_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN33_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN33_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3208@macro@PORT_PIN34_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN34_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN34_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3249@macro@PORT_PIN35_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN35_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "88",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN35_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3290@macro@PORT_PIN36_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN36_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "89",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN36_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3331@macro@PORT_PIN37_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN37_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "90",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN37_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3402@macro@PORT_PIN38_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN38_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "92",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN38_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3443@macro@PORT_PIN39_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN39_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "93",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN39_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3484@macro@PORT_PIN40_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN40_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN40_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3525@macro@PORT_PIN41_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN41_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "95",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN41_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3566@macro@PORT_PIN42_ID_INDEX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN42_ID_INDEX",
-    "location": {
-      "column": "9",
-      "line": "96",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN42_ID_INDEX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3793@macro@PORT_PIN_MODE_DIO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_DIO",
-    "location": {
-      "column": "9",
-      "line": "104",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_DIO",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3834@macro@PORT_PIN_MODE_CAN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_CAN",
-    "location": {
-      "column": "9",
-      "line": "105",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_CAN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3875@macro@PORT_PIN_MODE_SPI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_SPI",
-    "location": {
-      "column": "9",
-      "line": "106",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_SPI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3916@macro@PORT_PIN_MODE_I2C",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_I2C",
-    "location": {
-      "column": "9",
-      "line": "107",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_I2C",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3957@macro@PORT_PIN_MODE_DIO_WDG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_DIO_WDG",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_DIO_WDG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@3998@macro@PORT_PIN_MODE_DIO_GPT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_DIO_GPT",
-    "location": {
-      "column": "9",
-      "line": "109",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_DIO_GPT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@4039@macro@PORT_PIN_MODE_ICU",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_ICU",
-    "location": {
-      "column": "9",
-      "line": "110",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_ICU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@4080@macro@PORT_PIN_MODE_LIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_LIN",
-    "location": {
-      "column": "9",
-      "line": "111",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_LIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@4121@macro@PORT_PIN_MODE_MEM",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_MEM",
-    "location": {
-      "column": "9",
-      "line": "112",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_MEM",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@4162@macro@PORT_PIN_MODE_PWM",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_PWM",
-    "location": {
-      "column": "9",
-      "line": "113",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_PWM",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Cfg.h@4203@macro@PORT_PIN_MODE_ADC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PIN_MODE_ADC",
-    "location": {
-      "column": "9",
-      "line": "114",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Cfg.h"
-    },
-    "name": "PORT_PIN_MODE_ADC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@357@macro@PORT_REGS_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_REGS_H",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_REGS_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@421@macro@GPIO_PORTA_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTA_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTA_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@475@macro@GPIO_PORTB_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTB_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTB_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@529@macro@GPIO_PORTC_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTC_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTC_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@583@macro@GPIO_PORTD_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTD_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTD_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@637@macro@GPIO_PORTE_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTE_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTE_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@691@macro@GPIO_PORTF_BASE_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_PORTF_BASE_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "GPIO_PORTF_BASE_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@788@macro@PORT_DATA_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_DATA_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "28",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_DATA_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@837@macro@PORT_DIR_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_DIR_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "29",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_DIR_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@886@macro@PORT_ALT_FUNC_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_ALT_FUNC_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "30",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_ALT_FUNC_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@935@macro@PORT_PULL_UP_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PULL_UP_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_PULL_UP_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@984@macro@PORT_PULL_DOWN_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_PULL_DOWN_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "32",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_PULL_DOWN_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1033@macro@PORT_DIGITAL_ENABLE_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_DIGITAL_ENABLE_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "33",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_DIGITAL_ENABLE_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1082@macro@PORT_LOCK_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_LOCK_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_LOCK_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1131@macro@PORT_COMMIT_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_COMMIT_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_COMMIT_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1180@macro@PORT_ANALOG_MODE_SEL_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_ANALOG_MODE_SEL_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_ANALOG_MODE_SEL_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1229@macro@PORT_CTL_REG_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PORT_CTL_REG_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "37",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "PORT_CTL_REG_OFFSET",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Port_Regs.h@1342@macro@SYSCTL_REGCGC2_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SYSCTL_REGCGC2_REG",
-    "location": {
-      "column": "9",
-      "line": "40",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port_Regs.h"
-    },
-    "name": "SYSCTL_REGCGC2_REG",
     "origin": "user_include",
     "scope": null
   },
