@@ -317,10 +317,60 @@
 
 /****************************************************
  *     Choosen Configuration By the Tool            *
- *         "Pins Modes for all Pins"                *
+ *      "Pins Level Value for all Pins"             *
  *             PORT SWS Page 43                     *
+ *         Default Level is Low Level               *
  ****************************************************/
-
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN6_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTA_PIN7_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN6_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTB_PIN7_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN6_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTC_PIN7_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN6_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTD_PIN7_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTE_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTE_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTE_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTE_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTE_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTF_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW /* Led Pin initial value is low */
+#define PORTF_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+#define PORTF_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
+/* switch Pin initial value is low (will not be affected because it is input pin)*/
+#define PORTF_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW 
 
 
 
