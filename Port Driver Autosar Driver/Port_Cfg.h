@@ -99,6 +99,7 @@
  *     Choosen Configuration By the Tool       *
  *      "Pins Direction for all Pins"          *
  *             PORT SWS Page 42                *
+ *      Default Direction is Input Pin         *
  ***********************************************/
 /* PORTA ( 8 Pins ) */
 #define PORTA_PIN0_DIRECTION  PORT_PIN_IN
@@ -154,6 +155,7 @@
  *     Choosen Configuration By the Tool            *
  *  "Pins Direction Changeable for all Pins"        *
  *             PORT SWS Page 42                     *
+ *   Default Direction changeable is STD_OFF(0)     *
  ****************************************************/
 /* PORTA ( 8 Pins ) */
 #define PORTA_PIN0_DIRECTION_CHANGEABLE STD_OFF
@@ -264,6 +266,7 @@
  *     Choosen Configuration By the Tool            *
  *         "Pins Modes for all Pins"                *
  *             PORT SWS Page 43                     *
+ *         Default Mode is DIO Mode                 *
  ****************************************************/
 /* PORTA ( 8 Pins ) */
 #define PORTA_PIN0_INITIAL_MODE  (Port_PinModeType)0
@@ -371,6 +374,62 @@
 #define PORTF_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
 /* switch Pin initial value is low (will not be affected because it is input pin)*/
 #define PORTF_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW 
+
+/****************************************************
+ *     Choosen Configuration By the Tool            *
+ *     "Pins Mode Changeable for all Pins"          *
+ *             PORT SWS Page 44                     *
+ *    Default Mode changeable is STD_OFF(0)         *
+ ****************************************************/
+/* PORTA ( 8 Pins ) */
+#define PORTA_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN1_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN4_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN5_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN6_MODE_CHANGEABLE    STD_OFF
+#define PORTA_PIN7_MODE_CHANGEABLE    STD_OFF
+/* PORTB ( 8 Pins ) */
+#define PORTB_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN1_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN4_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN5_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN6_MODE_CHANGEABLE    STD_OFF
+#define PORTB_PIN7_MODE_CHANGEABLE    STD_OFF
+/* PORTC ( 8 Pins ) */
+#define PORTC_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN1_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN4_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN5_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN6_MODE_CHANGEABLE    STD_OFF
+#define PORTC_PIN7_MODE_CHANGEABLE    STD_OFF
+/* PORTD ( 8 Pins ) */
+#define PORTD_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN1_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN4_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN5_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN6_MODE_CHANGEABLE    STD_OFF
+#define PORTD_PIN7_MODE_CHANGEABLE    STD_OFF
+/* PORTE ( 6 Pins ) */
+#define PORTE_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTE_PIN1_MODE_CHANGEABLE    STD_OFF
+#define PORTE_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTE_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTE_PIN4_MODE_CHANGEABLE    STD_OFF
+#define PORTE_PIN5_MODE_CHANGEABLE    STD_OFF
+/* PORTF ( 5 Pins ) */
+#define PORTF_PIN0_MODE_CHANGEABLE    STD_OFF
+#define PORTF_PIN1_MODE_CHANGEABLE    STD_OFF /* Led Mode Changeable is off */
+#define PORTF_PIN2_MODE_CHANGEABLE    STD_OFF
+#define PORTF_PIN3_MODE_CHANGEABLE    STD_OFF
+#define PORTF_PIN4_MODE_CHANGEABLE    STD_OFF /* Switch Mode Changeable is off */
 
 
 
