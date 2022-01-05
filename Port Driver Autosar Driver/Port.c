@@ -375,16 +375,6 @@ void Port_SetPinDirection( Port_PinType Pin,
                 
 
 
-
-
-
-
-
-
-
-
-
-
 /************************************************************************************
 * Service Name: Port_RefreshPortDirection
 * Service ID[hex]: 0x02
@@ -512,10 +502,40 @@ void Port_RefreshPortDirection( void )
 * Return value: None
 * Description: Function to return the version information of the module.
 ************************************************************************************/
+/* [PORT103] : The function Port_GetVersionInfo shall be pre compile time configurable *
+ *             On/Off by the configuration parameter PortVersionInfoApi.               *
+ * Function will be Removed if it is OFF at the configuration tool.                    */
+#if (PORT_VERSION_INFO_API== STD_ON)
 void Port_GetVersionInfo( Std_VersionInfoType* versioninfo )
 {
+
+#if (PORT_DEV_ERROR_DETECT == STD_ON)
+/* PORT225: if Det is enabled, the parameter versioninfo shall be checked for being    *
+ *          NULL. The error PORT_E_PARAM_POINTER shall be reported in case the value   *
+ *          is a NULL pointer                                                          */
+  if(versioninfo == NULL_PTR)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_VERSION_INFO_API,
+                    PORT_E_PARAM_POINTER);
+  }
+  else
+#endif
+  {
+    /* Casting of the vendor id to uint16 as the member of the structure       */
+    versioninfo->vendorID=(uint16)PORT_VENDOR_ID;
+    /* Casting of the module id to uint16 as the member of the structure       */
+    versioninfo->moduleID=(uint16)PORT_MODULE_ID;
+    /* Casting of the autosar version to uint16 as the member of the structure */
+    versioninfo->sw_major_version=(uint8)PORT_AR_RELEASE_MAJOR_VERSION;
+    versioninfo->sw_minor_version=(uint8)PORT_AR_RELEASE_MINOR_VERSION;
+    versioninfo->sw_patch_version=(uint8)PORT_AR_RELEASE_PATCH_VERSION;
+  }
   
 }
+
+#endif
 
 
 
