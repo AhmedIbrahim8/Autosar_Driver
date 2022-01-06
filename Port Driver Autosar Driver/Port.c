@@ -390,7 +390,19 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
             |(PWM1_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
           }
           break;
-          
+          /*                                 If UART Mode                            *
+           * PC4 with U1Rx & U4Rx                                                    *
+           * PB0 with U1Rx                                                           *
+           * So, we will use PC4 with U4Rx                                           *
+           * PC5 with U1Tx & U4Tx                                                    *
+           * PB1 with U1Tx                                                           *
+           * So, we will use PC5 with U4Tx                                           *
+           * UART Number will be 1(UART_MODE) at Control Register                    */
+        case PORT_PIN_MODE_UART:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+            |(UART_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          break;
           /* Misra Rules */
         default :
           /* No Action Needed */
@@ -575,7 +587,7 @@ void Port_RefreshPortDirection( void )
   /* Local variable to store the base address of the GPIO register */
   volatile uint32 *Port_Base_Address_Ptr= NULL_PTR;
   /* local variable used to loop of the configuration array       */
-  uint8 counter;
+  uint8 index;
   /* Local Variable to store the error status */
   boolean error= FALSE;
   /* Det error checking code will be removed if it is off at the configuration tool */
@@ -600,15 +612,15 @@ void Port_RefreshPortDirection( void )
 #endif
   if(error==FALSE)
   {
-    for(counter=FIRST_LOOP;counter<PORT_CONFIGURED_PINS;counter++)
+    for(index=FIRST_LOOP;index<PORT_CONFIGURED_PINS;index++)
     {
       /* - Port Driver SWS Page (34)                                                                  *
            [PORT061]: The function Port_RefreshPortDirection shall exclude those port pins            *
                       from refreshing that are configured as ‘pin direction changeable during runtime *
        * Check if the pin direction is changeable, it will not be refreshed                           */
-      if(Port_Channels[counter].direction_changeable ==STD_OFF)
+      if(Port_Channels[index].direction_changeable ==STD_OFF)
       {
-        switch(Port_Channels[counter].port_num)
+        switch(Port_Channels[index].port_num)
       {
         /* PORTA Base Address */
       case PORTA_ID:
@@ -639,13 +651,13 @@ void Port_RefreshPortDirection( void )
         /* NO Action is needed (Misra Rules)*/
         break;
       }/* End Of Switch case */
-      switch(Port_Channels[counter].direction)
+      switch(Port_Channels[index].direction)
       {
       case PORT_PIN_IN:
-        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[index].pin_num);
         break;
       case PORT_PIN_OUT:
-        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[counter].pin_num);
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[index].pin_num);
         break;
         /* Misra Rules */
       default:
