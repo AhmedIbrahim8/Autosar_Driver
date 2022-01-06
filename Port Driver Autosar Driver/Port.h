@@ -182,6 +182,9 @@ typedef struct{
 #define DIO_GPT_MODE            0x00000007
 #define DIGITAL_COMPARATOR_MODE 0x00000009
 #define USB_DIGITAL_MODE        0x00000008
+#define NMI_MODE                0x00000008
+#define TRACE_DATA_MODE         0x0000000E /* Number 14 in hexa is E */
+
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

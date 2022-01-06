@@ -5,57 +5,42 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Std_Types.h</file>
-            <file>$PROJ_DIR$\Debug\Exe\Port_Driver.out</file>
-            <file>$PROJ_DIR$\Common_Macros.h</file>
-            <file>$PROJ_DIR$\Port.c</file>
-            <file>$PROJ_DIR$\Port_Cfg.h</file>
-            <file>$PROJ_DIR$\Port.h</file>
-            <file>$PROJ_DIR$\Port_PBcfg.c</file>
-            <file>$PROJ_DIR$\Port_Regs.h</file>
-            <file>$PROJ_DIR$\Compiler.h</file>
-            <file>$PROJ_DIR$\Det.h</file>
-            <file>$PROJ_DIR$\Det.c</file>
-            <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\Platform_Types.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\Port_PBcfg.o</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$PROJ_DIR$\Debug\List\Port_Driver.map</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Port.o</file>
             <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
             <file>$PROJ_DIR$\Debug\Obj\Det.o</file>
+            <file>$PROJ_DIR$\Std_Types.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\Port_Driver.out</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\List\Port_Driver.map</file>
             <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Port_PBcfg.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
             <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\Port.o</file>
+            <file>$PROJ_DIR$\Port_PBcfg.c</file>
+            <file>$PROJ_DIR$\Port_Regs.h</file>
+            <file>$PROJ_DIR$\Common_Macros.h</file>
+            <file>$PROJ_DIR$\Det.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\Compiler.h</file>
+            <file>$PROJ_DIR$\Port.c</file>
+            <file>$PROJ_DIR$\Det.h</file>
+            <file>$PROJ_DIR$\Platform_Types.h</file>
+            <file>$PROJ_DIR$\Port.h</file>
+            <file>$PROJ_DIR$\Port_Cfg.h</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Port_Driver.out</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 16</file>
+                    <file> 6</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 22 15 21 19 13 20 18 14 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Port.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 18</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2 8 9 12 5 4 7 0</file>
+                    <file> 10 5 7 0 4 1 11 8 9</file>
                 </tool>
             </inputs>
         </file>
@@ -64,13 +49,13 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14</file>
+                    <file> 8</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 2 8 12 5 4 0</file>
+                    <file> 14 17 20 21 22 2</file>
                 </tool>
             </inputs>
         </file>
@@ -79,13 +64,13 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 20</file>
+                    <file> 1</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 8 9 12 0</file>
+                    <file> 17 19 20 2</file>
                 </tool>
             </inputs>
         </file>
@@ -94,16 +79,25 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 17</file>
+                    <file> 9</file>
                 </tool>
             </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Port.c</name>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14 17 19 20 21 22 13 2</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 1 16</file>
+                    <file> 6 3</file>
                 </tool>
             </outputs>
         </file>

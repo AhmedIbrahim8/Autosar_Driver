@@ -271,11 +271,11 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         }
         break;
           
-        /* If Pin Mode is something else                                       *
-         *     - 1 at Alternative Register                                     *
-         *     - 1 at Degital Register (All Pin Modes are digital except ADC)  *
-         *     - 0 at Analog Register                                          *
-         *     - switch case to specify which mode of them                     */
+        /* If Pin Mode is something else                                                                    *
+         *     - 1 at Alternative Register                                                                  *
+         *     - 1 at Digital Register (All Pin Modes are digital except ADC,Analog Comparator,USB Analog)  *
+         *     - 0 at Analog Register                                                                       *
+         *     - switch case to specify which mode of them                                                  */
       default:
         SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[index].pin_num);
         SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[index].pin_num);
@@ -317,10 +317,27 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
           |(DIO_GPT_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
           break;
+          /* If Non-Maskable Interrupt Mode, Number 8(NMI_MODE) at control register*/
+        case PORT_PIN_MODE_NMI:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+          |(NMI_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          break;
+          /* If Trace Data Mode, Number 14(TRACE_DATA_MODE) at Control reister */
+        case PORT_PIN_MODE_TRACE_DATA:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+          |(TRACE_DATA_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          break;
+          /* Misra Rules */
+        default :
+          /* No Action Needed */
+          break;
+            
           
           
           
-        }
+        }/* End of switch case inside the default */
         
         
         break;
