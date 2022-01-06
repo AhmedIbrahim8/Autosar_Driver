@@ -39,6 +39,38 @@
 /* Number of pins in the TM4C123GH6PM */
 #define PORT_CONFIGURED_PINS   (43U)
 
+/* As Required in PORT SWS in page 44                                          */
+/* Note: DIO mode & ADC mode are the same mode number so, we need              *
+         to differentiate between them in the code                             *
+ * In TivaC Data Sheet Page (1330 to 1352), there is the multiple modes        *
+ * Supported by TivaC Which are:                                               *
+ *                              - UART Mode                                    *
+ *                              - DIO Mode                                     *
+ *                              - SPI Mode                                     *
+ *                              - I2C Mode                                     *
+ *                              - ICU Mode-Capture Compare PWM pins(CCP)       *
+ *                              - QEI Mode(Quadrature Encoder Interface)       *
+ *                              - PWM Mode                                     *
+ *                              - USB Mode (Analog signal or Digital)          *
+ *                              - CAN Mode                                     *
+ *                              - ADC Mode (Analog)                            *
+ *                              - Non Maskable Interrupt Mode(NMI)             *
+ *                              - Analog comparator MODE (Analog or Digital)   *
+ *                              - Trace Data Mode                              */
+#define PORT_PIN_MODE_DIO                         (Port_PinModeType)0
+#define PORT_PIN_MODE_UART                        (Port_PinModeType)1
+#define PORT_PIN_MODE_SPI                         (Port_PinModeType)2
+#define PORT_PIN_MODE_I2C                         (Port_PinModeType)3
+#define PORT_PIN_MODE_DIO_GPT                     (Port_PinModeType)4
+#define PORT_PIN_MODE_QEI                         (Port_PinModeType)5
+#define PORT_PIN_MODE_PWM                         (Port_PinModeType)6
+#define PORT_PIN_MODE_USB                         (Port_PinModeType)7
+#define PORT_PIN_MODE_CAN                         (Port_PinModeType)8
+#define PORT_PIN_MODE_ADC                         (Port_PinModeType)9
+#define PORT_PIN_MODE_NMI                         (Port_PinModeType)10
+#define PORT_PIN_MODE_COMPARATOR                  (Port_PinModeType)11
+#define PORT_PIN_MODE_TRACE_DATA                  (Port_PinModeType)12
+
 /************************************************************
  *       Channel Index in the Array of the Structure        *
  * Note: the pin index must be as its position in the array *
@@ -269,54 +301,54 @@
  *         Default Mode is DIO Mode                 *
  ****************************************************/
 /* PORTA ( 8 Pins ) */
-#define PORTA_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN1_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN4_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN5_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN6_INITIAL_MODE  (Port_PinModeType)0
-#define PORTA_PIN7_INITIAL_MODE  (Port_PinModeType)0
+#define PORTA_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN5_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN6_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTA_PIN7_INITIAL_MODE  PORT_PIN_MODE_DIO
 /* PORTB ( 8 Pins ) */
-#define PORTB_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN1_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN4_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN5_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN6_INITIAL_MODE  (Port_PinModeType)0
-#define PORTB_PIN7_INITIAL_MODE  (Port_PinModeType)0
+#define PORTB_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN5_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN6_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTB_PIN7_INITIAL_MODE  PORT_PIN_MODE_DIO
 /* PORTC ( 8 Pins ) */
-#define PORTC_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN1_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN4_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN5_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN6_INITIAL_MODE  (Port_PinModeType)0
-#define PORTC_PIN7_INITIAL_MODE  (Port_PinModeType)0
+#define PORTC_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN5_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN6_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTC_PIN7_INITIAL_MODE  PORT_PIN_MODE_DIO
 /* PORTD ( 8 Pins ) */
-#define PORTD_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN1_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN4_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN5_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN6_INITIAL_MODE  (Port_PinModeType)0
-#define PORTD_PIN7_INITIAL_MODE  (Port_PinModeType)0
+#define PORTD_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN5_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN6_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTD_PIN7_INITIAL_MODE  PORT_PIN_MODE_DIO
 /* PORTE ( 6 Pins ) */
-#define PORTE_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTE_PIN1_INITIAL_MODE  (Port_PinModeType)0
-#define PORTE_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTE_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTE_PIN4_INITIAL_MODE  (Port_PinModeType)0
-#define PORTE_PIN5_INITIAL_MODE  (Port_PinModeType)0
+#define PORTE_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTE_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTE_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTE_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTE_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTE_PIN5_INITIAL_MODE  PORT_PIN_MODE_DIO
 /* PORTF ( 5 Pins ) */
-#define PORTF_PIN0_INITIAL_MODE  (Port_PinModeType)0
-#define PORTF_PIN1_INITIAL_MODE  (Port_PinModeType)0 /* Led Pin Mode is DIO */
-#define PORTF_PIN2_INITIAL_MODE  (Port_PinModeType)0
-#define PORTF_PIN3_INITIAL_MODE  (Port_PinModeType)0
-#define PORTF_PIN4_INITIAL_MODE  (Port_PinModeType)0 /* Switch Pin Mode is DIO */
+#define PORTF_PIN0_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTF_PIN1_INITIAL_MODE  PORT_PIN_MODE_DIO /* Led Pin Mode is DIO */
+#define PORTF_PIN2_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTF_PIN3_INITIAL_MODE  PORT_PIN_MODE_DIO
+#define PORTF_PIN4_INITIAL_MODE  PORT_PIN_MODE_DIO /* Switch Pin Mode is DIO */
 
 /****************************************************
  *     Choosen Configuration By the Tool            *
@@ -433,36 +465,5 @@
 
 
 
-/* As Required in PORT SWS in page 44                                          */
-/* Note: DIO mode & ADC mode are the same mode number so, we need              *
-         to differentiate between them in the code                             *
- * In TivaC Data Sheet Page (1330 to 1352), there is the multiple modes        *
- * Supported by TivaC Which are:                                               *
- *                              - UART Mode                                    *
- *                              - DIO Mode                                     *
- *                              - SPI Mode                                     *
- *                              - I2C Mode                                     *
- *                              - ICU Mode-Capture Compare PWM pins(CCP)       *
- *                              - QEI Mode(Quadrature Encoder Interface)       *
- *                              - PWM Mode                                     *
- *                              - USB Mode (Analog signal or Digital)          *
- *                              - CAN Mode                                     *
- *                              - ADC Mode (Analog)                            *
- *                              - Non Maskable Interrupt Mode(NMI)             *
- *                              - Analog comparator MODE (Analog or Digital)   *
- *                              - Trace Data Mode                              */
-#define PORT_PIN_MODE_DIO                         (uint8)0
-#define PORT_PIN_MODE_UART                        (uint8)1
-#define PORT_PIN_MODE_SPI                         (uint8)2
-#define PORT_PIN_MODE_I2C                         (uint8)3
-#define PORT_PIN_MODE_DIO_GPT                     (uint8)4
-#define PORT_PIN_MODE_QEI                         (uint8)5
-#define PORT_PIN_MODE_PWM                         (uint8)6
-#define PORT_PIN_MODE_USB                         (uint8)7
-#define PORT_PIN_MODE_CAN                         (uint8)8
-#define PORT_PIN_MODE_ADC                         (uint8)9
-#define PORT_PIN_MODE_NMI                         (uint8)10
-#define PORT_PIN_MODE_COMPARATOR                  (uint8)11
-#define PORT_PIN_MODE_TRACE_DATA                  (uint8)12
 
 #endif
