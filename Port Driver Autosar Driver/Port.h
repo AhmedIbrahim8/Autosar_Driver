@@ -184,7 +184,7 @@ typedef struct{
 #define USB_DIGITAL_MODE        0x00000008
 #define NMI_MODE                0x00000008
 #define TRACE_DATA_MODE         0x0000000E /* Number 14 in hexa is E */
-
+#define QEI_MODE                0x00000006
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

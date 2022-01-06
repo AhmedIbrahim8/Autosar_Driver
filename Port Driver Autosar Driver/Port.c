@@ -329,6 +329,12 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
           |(TRACE_DATA_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
           break;
+          /* If QEI Mode, Number 6 at control register */
+        case PORT_PIN_MODE_QEI:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+          |(QEI_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          break;
           /* Misra Rules */
         default :
           /* No Action Needed */
