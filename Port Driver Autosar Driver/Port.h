@@ -194,6 +194,8 @@ typedef struct{
 #define PWM0_MODE               0x00000004
 #define PWM1_MODE               0x00000005
 #define UART_MODE               0x00000001
+#define PORT_FIRST_MODE_NUMBER  (Port_PinModeType)0   /* This Value is obtained from Port_Cfg.h */
+#define PORT_LAST_MODE_NUMBER   (Port_PinModeType)12  /* This Value is obtained from Port_Cfg.h */
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/

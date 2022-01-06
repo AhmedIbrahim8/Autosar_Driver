@@ -762,12 +762,366 @@ void Port_GetVersionInfo( Std_VersionInfoType* versioninfo )
 * Return value: None
 * Description: Function to set the port pin mode at runtime.
 ************************************************************************************/
+/* true: Enabled - Function Port_SetPinMode() is available.      *
+ * false: Disabled - Function Port_SetPinMode() is not available.*/
+#if (PORT_SET_PIN_MODE_API == STD_ON)
 void Port_SetPinMode( Port_PinType Pin, 
                      Port_PinModeType Mode )
 {
+  /* Local variable to store the base address of the GPIO register */
+  volatile uint32 *Port_Base_Address_Ptr= NULL_PTR;
+  /* Local Variable to store the error status */
+  boolean error= FALSE;
+  /* Det error checking code will be removed if it is off at the configuration tool */
+#if(PORT_DEV_ERROR_DETECT == STD_ON)
+  /* Checking the status of the port driver. if it is uninitialized it will report  *
+   * a det error and change the state of the error to TRUE.                         */
+  if(Port_Status == PORT_NOT_INITIALIZED)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_UNINIT);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Neede */
+  }
+  /* Checking if the pin equal or greater than the Port Configured Channels, it will*
+   * report a det error and change the state of the error to be TRUE.               */
+  if(Pin>=PORT_CONFIGURED_PINS)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_PARAM_PIN);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
+  /* PORT223: If Det is enabled, the function Port_SetPinMode shall return PORT_E_MODE_UNCHANGEABLE  *
+   * and return without any action, if the parameter PortPinModeChangeable is set to FALSE.          */
+  if(Port_Channels[Pin].mode_changeable == STD_OFF)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_MODE_UNCHANGEABLE);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
+  /* If the mode is out of range, it will report a det error and change the state of the error to be true */
+  if((Mode >= PORT_FIRST_MODE_NUMBER) && (Mode <= PORT_LAST_MODE_NUMBER))
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_PARAM_INVALID_MODE);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
   
+#endif
+  if(error == FALSE)
+  {
+    switch(Port_Channels[Pin].port_num)
+      {
+        /* PORTA Base Address */
+      case PORTA_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTA_BASE_ADDRESS;
+        break;
+        /* PORTB Base Address */
+      case PORTB_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTB_BASE_ADDRESS;
+        break;
+        /* PORTC Base Address */
+      case PORTC_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTC_BASE_ADDRESS;
+        break;
+        /* PORTD Base Address */
+      case PORTD_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTD_BASE_ADDRESS;
+        break;
+        /* PORTE Base Address */
+      case PORTE_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTE_BASE_ADDRESS;
+        break;
+        /* PORTF Base Address */
+      case PORTF_ID:
+        Port_Base_Address_Ptr =(volatile uint32*)GPIO_PORTF_BASE_ADDRESS;
+        break;
+        /* (Misra Rules) */
+      default:
+        /* NO Action is needed (Misra Rules)*/
+        break;
+      }
+      
+      /* Check the modes to adjust : - Control Register           *
+       *                             - Alernative Register        *
+       *                             - Analog Register            *
+       *                             - Digital Register           *
+       ************************************************************/
+      switch(Port_Channels[Pin].mode)
+      {
+        /* If Pin Mode = DIO Mode                                     *
+         *     - 0 at Alternate Register                            * 
+         *     - 1 at Digital Register                                *
+         *     - 0 at Analog Register                                 *
+         *     - 0 at the 4-bit of the pin number at control register */
+      case PORT_PIN_MODE_DIO:
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+        *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
+       (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        break;
+        /* If Pin Mode = ADC Mode                                     *
+         *     - 0 at Alternate Register                            * 
+         *     - 0 at Digital Register                                *
+         *     - 1 at Analog Register                                 *
+         *     - 0 at the 4-bit of the pin number at control register */
+      case PORT_PIN_MODE_ADC:
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+        *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
+       (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        break;
+        /* There is Analog Comparator and Digital Comparator and we need to differentiate *
+         * between them. That can be done by the pin index.                               *
+         *                      (TivaC Data Sheet Page 651)                               *
+         * if PF0 or PF1               : Digital Comparator                               *
+         * if PC4 or PC5 or PC6 or PC7 : Analog Comparator                                */
+      case PORT_PIN_MODE_COMPARATOR:
+        /* If Digital Comparator : - 1 at Alternate Register                                  *
+         *                         - 0 at Analog Register                                     *
+         *                         - 1 at Digital Register                                    *
+         *                         - Number 9(DIGITAL_COMPARATOR_MODE) at Control Register    */
+        if((Pin == PORTF_PIN0_ID_INDEX) || (Pin == PORTF_PIN1_ID_INDEX))
+        {
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(DIGITAL_COMPARATOR_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        }
+        /* If Ananlog Comparator : - 0 at Alternate Register                                  *
+         *                         - 1 at Analog Register                                     *
+         *                         - 0 at Digital Register                                    *
+         *                         - Number 0 at Control Register                             */
+        else
+        {
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
+         (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        }
+        break;
+        /* There are 4-options which are :                               *
+         *    - (USB0epen & USB0pflt) are Digital signals                *
+         *    - ( USB0DM  &  USB0DP ) are Analog signals                 *
+         * If PD2 or PD3 or PF4 or PC6 or PC7: Digital Signal            *
+         * If PD4 or PD5 : Analog Signal                                 */
+      case PORT_PIN_MODE_USB:
+        /*    Analog :  - 0 at Alternate Register         *
+         *              - 1 at Analog Register            *
+         *              - 0 at Digiral Register           *
+         *              - Numer 0 at Control Register     */
+        if((Pin == PORTD_PIN4_ID_INDEX) || (Pin == PORTD_PIN5_ID_INDEX))
+        {
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)= \
+         (*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        }
+        /*   Digital :  - 1 at Alternate Register                           *
+         *              - 0 at Analog Register                              *
+         *              - 1 at Digiral Register                             *
+         *              - Numer 8(USB_DIGITAL_MODE) at Control Register     */
+        else
+        {
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+          CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+          SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(USB_DIGITAL_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+        }
+        break;
+          
+        /* If Pin Mode is something else                                                                    *
+         *     - 1 at Alternative Register                                                                  *
+         *     - 1 at Digital Register (All Pin Modes are digital except ADC,Analog Comparator,USB Analog)  *
+         *     - 0 at Analog Register                                                                       *
+         *     - switch case to specify which mode of them                                                  */
+      default:
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ALT_FUNC_REG_OFFSET),Port_Channels[Pin].pin_num);
+        SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),Port_Channels[Pin].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),Port_Channels[Pin].pin_num);
+        /* Switch Case to specify the mode */
+        switch(Port_Channels[Pin].mode)
+        {
+          /* If the mode is CAN                               *
+           * Note : - Can Mode Number is 3 at PF0 and PF3     *
+           *        - Can Mode Number is 8 at the rest        */
+        case PORT_PIN_MODE_CAN:
+          /* Number 3(CAN_MODE_3) should be inserted at the 4-bits of the pin number if PF0 or PF3 */
+          if((Pin == PORTF_PIN0_ID_INDEX) || (Pin == PORTF_PIN3_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(CAN_MODE_3<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          /* Number 8(CAN_MODE_8) should be inserted at the 4-bits of the pin number if pin index is something else */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(CAN_MODE_8<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          break;
+          /* If the mode is I2C, Number 3(I2C_MODE) should be inserted at the 4-bit of the pin number */
+        case PORT_PIN_MODE_I2C:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(I2C_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /* It shall be used under control of the general purpose timer driver             *
+           * Example : ICU(INPUT CAPTURE UNIT) which name is Capture Compare PWM pins (CCP) *
+           * T0CCP0 ----> T3CCP1 & WT0CCP0 ----> WT5CCP1                                    *
+           * Number 7(DIO_GPT_MODE) should be inserted at the 4-bit of the pin number       */
+        case PORT_PIN_MODE_DIO_GPT:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(DIO_GPT_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /* If Non-Maskable Interrupt Mode, Number 8(NMI_MODE) at control register*/
+        case PORT_PIN_MODE_NMI:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(NMI_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /* If Trace Data Mode, Number 14(TRACE_DATA_MODE) at Control reister */
+        case PORT_PIN_MODE_TRACE_DATA:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(TRACE_DATA_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /* If QEI Mode, Number 6 at control register */
+        case PORT_PIN_MODE_QEI:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+        ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+          |(QEI_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /*                      If SPI Mode                           *
+           * [PA2,PA3,PA4,PA5] used with SPI0                           *
+           * [PF0,PF1,PF2,PF4] used with SPI1                           *
+           * [PB4,PB5,PB6,PB7] used with SPI2                           *
+           * [PD0,PD1,PD2,PD3] used with SPI3 and SPI1 so, we will      *
+           * use PORTD with SPI3 and not SPI1 because we can use SPI3   *
+           * only with PORTD but SPI1 can be used with PORTD            */
+        case PORT_PIN_MODE_SPI:
+          /* If [PD0 or PD1 or PD2 or PD3], number 1(SPI_MODE_1) at Control Register which is SPI3 */
+          if((Pin == PORTD_PIN0_ID_INDEX) || (Pin == PORTD_PIN1_ID_INDEX) || (Pin == PORTD_PIN2_ID_INDEX) || (Pin == PORTD_PIN3_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+            |(SPI_MODE_1<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          /* If Something we will use numer 2(SPI_MODE_2) at Control Register which can be SPI0 or SPI1 or SPI2 based *
+           * on the port number and pin number.                                                                       */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+            |(SPI_MODE_2<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          break;
+          /*                                 If PWM Mode                            *
+           * PE4 Can be used with M1PWM2 & M0PWM4                                   *
+           * PA6 Can be used with M1PWM2                                            *
+           * So, we will use PE4 with M0PWM4                                        *
+           * PE5 Can be used with M1PWM3 & M0PWM5                                   *
+           * PA7 Can be used with M1PWM3                                            *
+           * So, we will use PE5 with M0PWM5                                        *
+           * PD0 Can be used with M0PWM6 & M1PWM0                                   *
+           * PC4 Can be used with M0PWM6                                            *
+           * So, we will use PD0 with M1PWM0                                        *
+           * PD1 Can be used with M0PWM7 & M1PWM1                                   *
+           * PC5 Can be used with M0PWM7                                            *
+           * So, we will use PD1 with M1PWM1*/
+        case PORT_PIN_MODE_PWM:
+          /* Incase of PWM0 With [PB4 PB5 PB6 PB7 PC4 PC5 PE4 PE5], number 4(PWM0_MODE) at Control Register */
+          if((Pin==PORTB_PIN4_ID_INDEX)||(Pin==PORTB_PIN5_ID_INDEX)||(Pin==PORTB_PIN6_ID_INDEX)||\
+             (Pin==PORTB_PIN7_ID_INDEX)||(Pin==PORTC_PIN4_ID_INDEX)||(Pin==PORTC_PIN5_ID_INDEX)||\
+             (Pin==PORTE_PIN4_ID_INDEX)||(Pin==PORTE_PIN5_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+            |(PWM0_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          /* Incase of PWM1 With [PA6 PA7 PD0 PD1 PF0 PF1 PF2 PF3], number 5(PWM1_MODE) at Control Register */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+            |(PWM1_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          }
+          break;
+          /*                                 If UART Mode                            *
+           * PC4 with U1Rx & U4Rx                                                    *
+           * PB0 with U1Rx                                                           *
+           * So, we will use PC4 with U4Rx                                           *
+           * PC5 with U1Tx & U4Tx                                                    *
+           * PB1 with U1Tx                                                           *
+           * So, we will use PC5 with U4Tx                                           *
+           * UART Number will be 1(UART_MODE) at Control Register                    */
+        case PORT_PIN_MODE_UART:
+          *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[Pin].pin_num)*BIT_SHIFT)))\
+            |(UART_MODE<<((Port_Channels[Pin].pin_num)*BIT_SHIFT));
+          break;
+          /* Misra Rules */
+        default :
+          /* No Action Needed */
+          break;
+            
+          
+          
+          
+        }/* End of switch case inside the default */
+        
+        
+        break;
+      }/* End Of switch case (mode)*/
+      
+  }/* End Of if condition */
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
   
 }
+
+
+#endif
 
 
 
