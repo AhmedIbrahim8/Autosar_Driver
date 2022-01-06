@@ -359,6 +359,38 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
             |(SPI_MODE_2<<((Port_Channels[index].pin_num)*BIT_SHIFT));
           }
           break;
+          /*                                 If PWM Mode                            *
+           * PE4 Can be used with M1PWM2 & M0PWM4                                   *
+           * PA6 Can be used with M1PWM2                                            *
+           * So, we will use PE4 with M0PWM4                                        *
+           * PE5 Can be used with M1PWM3 & M0PWM5                                   *
+           * PA7 Can be used with M1PWM3                                            *
+           * So, we will use PE5 with M0PWM5                                        *
+           * PD0 Can be used with M0PWM6 & M1PWM0                                   *
+           * PC4 Can be used with M0PWM6                                            *
+           * So, we will use PD0 with M1PWM0                                        *
+           * PD1 Can be used with M0PWM7 & M1PWM1                                   *
+           * PC5 Can be used with M0PWM7                                            *
+           * So, we will use PD1 with M1PWM1*/
+        case PORT_PIN_MODE_PWM:
+          /* Incase of PWM0 With [PB4 PB5 PB6 PB7 PC4 PC5 PE4 PE5], number 4(PWM0_MODE) at Control Register */
+          if((index==PORTB_PIN4_ID_INDEX)||(index==PORTB_PIN5_ID_INDEX)||(index==PORTB_PIN6_ID_INDEX)||\
+             (index==PORTB_PIN7_ID_INDEX)||(index==PORTC_PIN4_ID_INDEX)||(index==PORTC_PIN5_ID_INDEX)||\
+             (index==PORTE_PIN4_ID_INDEX)||(index==PORTE_PIN5_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+            |(PWM0_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          }
+          /* Incase of PWM1 With [PA6 PA7 PD0 PD1 PF0 PF1 PF2 PF3], number 5(PWM1_MODE) at Control Register */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+            |(PWM1_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          }
+          break;
+          
           /* Misra Rules */
         default :
           /* No Action Needed */
