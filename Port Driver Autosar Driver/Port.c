@@ -114,6 +114,20 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         /* Commit the pin based on the pin_num */
         SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_COMMIT_REG_OFFSET),Port_Channels[index].pin_num);
       }
+      /* If JTAG Pins, we will not write any thing to them by making continue statement *
+       * JTAG PINS are : - PC0                                                          *
+       *                 - PC1                                                          *
+       *                 - PC2                                                          *
+       *                 - PC3                                                          */
+      else if(((Port_Channels[index].port_num == PORTC_ID) && (Port_Channels[index].pin_num == JTAG_PIN_PC0))\
+            ||((Port_Channels[index].port_num == PORTC_ID) && (Port_Channels[index].pin_num == JTAG_PIN_PC1))\
+            ||((Port_Channels[index].port_num == PORTC_ID) && (Port_Channels[index].pin_num == JTAG_PIN_PC2))\
+            ||((Port_Channels[index].port_num == PORTC_ID) && (Port_Channels[index].pin_num == JTAG_PIN_PC3)))
+      {
+        /*                                     (Violation Of Misra Rules)                                  *
+         * Justification : We need to protect JTAG Pins From User that's why we made the continue Statment */
+        continue;
+      }
       /* Misra Rules */
       else
       {

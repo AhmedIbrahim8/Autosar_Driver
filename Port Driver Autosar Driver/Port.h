@@ -174,6 +174,10 @@ typedef struct{
 #define MAGIC_NUMBER        (0x4C4F434B)
 #define SPECIAL_PIN_PC7         (7U)
 #define SPECIAL_PIN_PF0         (0U)
+#define JTAG_PIN_PC0            (0U)
+#define JTAG_PIN_PC1            (1U)
+#define JTAG_PIN_PC2            (2U)
+#define JTAG_PIN_PC3            (3U)
 #define CONTROL_REGISTER_MASK  0x0000000F
 #define BIT_SHIFT               (4U)
 #define CAN_MODE_8              0x00000008

@@ -1,5 +1,11 @@
+#include "Port.h"
 
 int main()
 {
-  return 0;
+  Port_Init(&Port_Configuration);
+  while(1)
+  {
+    
+  }
+  
 }
