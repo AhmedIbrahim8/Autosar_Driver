@@ -335,6 +335,30 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
         ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
           |(QEI_MODE<<((Port_Channels[index].pin_num)*BIT_SHIFT));
           break;
+          /*                      If SPI Mode                           *
+           * [PA2,PA3,PA4,PA5] used with SPI0                           *
+           * [PF0,PF1,PF2,PF4] used with SPI1                           *
+           * [PB4,PB5,PB6,PB7] used with SPI2                           *
+           * [PD0,PD1,PD2,PD3] used with SPI3 and SPI1 so, we will      *
+           * use PORTD with SPI3 and not SPI1 because we can use SPI3   *
+           * only with PORTD but SPI1 can be used with PORTD            */
+        case PORT_PIN_MODE_SPI:
+          /* If [PD0 or PD1 or PD2 or PD3], number 1(SPI_MODE_1) at Control Register which is SPI3 */
+          if((index == PORTD_PIN0_ID_INDEX) || (index == PORTD_PIN1_ID_INDEX) || (index == PORTD_PIN2_ID_INDEX) || (index == PORTD_PIN3_ID_INDEX))
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+            |(SPI_MODE_1<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          }
+          /* If Something we will use numer 2(SPI_MODE_2) at Control Register which can be SPI0 or SPI1 or SPI2 based *
+           * on the port number and pin number.                                                                       */
+          else
+          {
+            *(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)=\
+          ((*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_CTL_REG_OFFSET)) &~(CONTROL_REGISTER_MASK<<((Port_Channels[index].pin_num)*BIT_SHIFT)))\
+            |(SPI_MODE_2<<((Port_Channels[index].pin_num)*BIT_SHIFT));
+          }
+          break;
           /* Misra Rules */
         default :
           /* No Action Needed */

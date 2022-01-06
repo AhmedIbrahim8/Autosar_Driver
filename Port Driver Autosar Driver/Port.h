@@ -185,6 +185,8 @@ typedef struct{
 #define NMI_MODE                0x00000008
 #define TRACE_DATA_MODE         0x0000000E /* Number 14 in hexa is E */
 #define QEI_MODE                0x00000006
+#define SPI_MODE_1              0x00000001
+#define SPI_MODE_2              0x00000002
 /*******************************************************************************
  *                      Function Prototypes                                    *
  *******************************************************************************/
