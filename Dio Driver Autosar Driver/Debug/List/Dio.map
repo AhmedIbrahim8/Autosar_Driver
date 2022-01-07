@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.1.318/W64 for ARM                  07/Jan/2022  23:59:56
+# IAR ELF Linker V9.20.1.318/W64 for ARM                  08/Jan/2022  00:08:56
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -13,8 +13,9 @@
 #        -f "E:\ARM & AUTOSAR\Port Driver\Dio Driver Autosar
 #        Driver\Debug\Exe\Dio.out.rsp" ("E:\ARM & AUTOSAR\Port Driver\Dio
 #        Driver Autosar Driver\Debug\Obj\Det.o" "E:\ARM & AUTOSAR\Port
-#        Driver\Dio Driver Autosar Driver\Debug\Obj\main.o" --no_out_extension
-#        -o "E:\ARM & AUTOSAR\Port Driver\Dio Driver Autosar
+#        Driver\Dio Driver Autosar Driver\Debug\Obj\Dio_PBcfg.o" "E:\ARM &
+#        AUTOSAR\Port Driver\Dio Driver Autosar Driver\Debug\Obj\main.o"
+#        --no_out_extension -o "E:\ARM & AUTOSAR\Port Driver\Dio Driver Autosar
 #        Driver\Debug\Exe\Dio.out" --redirect _Printf=_PrintfFullNoMb
 #        --redirect _Scanf=_ScanfFullNoMb --map "E:\ARM & AUTOSAR\Port
 #        Driver\Dio Driver Autosar Driver\Debug\List\Dio.map" --config

@@ -2852,6 +2852,15 @@
         <name>$PROJ_DIR$\Det.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\Dio.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\Dio_Cfg.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\Dio_PBcfg.c</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\Dio_Regs.h</name>
     </file>
     <file>
