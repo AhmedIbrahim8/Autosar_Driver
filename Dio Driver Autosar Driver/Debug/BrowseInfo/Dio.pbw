@@ -224,6 +224,34 @@
     "scope": null
   },
   {
+    "ID": "c:@Det_ModuleId",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Det_ModuleId",
+    "location": {
+      "column": "15",
+      "line": "53",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
+    },
+    "name": "Det_ModuleId",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Det_InstanceId",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Det_InstanceId",
+    "location": {
+      "column": "14",
+      "line": "54",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
+    },
+    "name": "Det_InstanceId",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@Det_InstanceId",
     "What": "Variable",
     "defdec": "Dec",
@@ -252,6 +280,20 @@
     "scope": null
   },
   {
+    "ID": "c:@Det_ApiId",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Det_ApiId",
+    "location": {
+      "column": "14",
+      "line": "55",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
+    },
+    "name": "Det_ApiId",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@Det_ErrorId",
     "What": "Variable",
     "defdec": "Dec",
@@ -262,6 +304,34 @@
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
     },
     "name": "Det_ErrorId",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Det_ErrorId",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Det_ErrorId",
+    "location": {
+      "column": "14",
+      "line": "56",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
+    },
+    "name": "Det_ErrorId",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Det_ReportError",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "Std_ReturnType Det_ReportError(uint16, uint8, uint8, uint8)",
+    "location": {
+      "column": "16",
+      "line": "61",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Det.h"
+    },
+    "name": "Det_ReportError",
     "origin": "user_include",
     "scope": null
   },
@@ -1898,6 +1968,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Dio_ReadChannel",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "Dio_LevelType Dio_ReadChannel(Dio_ChannelType)",
+    "location": {
+      "column": "15",
+      "line": "182",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_ReadChannel",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Dio_WriteChannel",
     "What": "Function",
     "defdec": "Dec",
@@ -1908,6 +1992,34 @@
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
     },
     "name": "Dio_WriteChannel",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_WriteChannel",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Dio_WriteChannel(Dio_ChannelType, Dio_LevelType)",
+    "location": {
+      "column": "6",
+      "line": "185",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_WriteChannel",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Dio_Init(const Dio_ConfigType *)",
+    "location": {
+      "column": "6",
+      "line": "188",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_Init",
     "origin": "user_include",
     "scope": null
   },
@@ -1940,6 +2052,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Dio_FlipChannel",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "Dio_LevelType Dio_FlipChannel(Dio_ChannelType)",
+    "location": {
+      "column": "15",
+      "line": "192",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_FlipChannel",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Dio_GetVersionInfo",
     "What": "Function",
     "defdec": "Dec",
@@ -1950,6 +2076,34 @@
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
     },
     "name": "Dio_GetVersionInfo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_GetVersionInfo",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Dio_GetVersionInfo(Std_VersionInfoType *)",
+    "location": {
+      "column": "6",
+      "line": "197",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_GetVersionInfo",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@Dio_Configuration",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Dio_Configuration",
+    "location": {
+      "column": "29",
+      "line": "205",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.h"
+    },
+    "name": "Dio_Configuration",
     "origin": "user_include",
     "scope": null
   },
@@ -2290,101 +2444,311 @@
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@414@macro@DIO_PBCFG_SW_MAJOR_VERSION",
+    "ID": "c:Dio.c@Dio_PortChannels",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Dio_PortChannels",
+    "location": {
+      "column": "34",
+      "line": "27",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_PortChannels",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@Dio_Status",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Dio_Status",
+    "location": {
+      "column": "14",
+      "line": "28",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_Status",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Dio_Init(const Dio_ConfigType *)",
+    "location": {
+      "column": "6",
+      "line": "41",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_WriteChannel",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Dio_WriteChannel(Dio_ChannelType, Dio_LevelType)",
+    "location": {
+      "column": "6",
+      "line": "74",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_WriteChannel",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@2634@F@Dio_WriteChannel@Port_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Ptr",
+    "location": {
+      "column": "20",
+      "line": "76",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Port_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@2675@F@Dio_WriteChannel@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "10",
+      "line": "77",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_ReadChannel",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "Dio_LevelType Dio_ReadChannel(Dio_ChannelType)",
+    "location": {
+      "column": "15",
+      "line": "153",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_ReadChannel",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@4878@F@Dio_ReadChannel@Port_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Ptr",
+    "location": {
+      "column": "20",
+      "line": "155",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Port_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@4919@F@Dio_ReadChannel@logic",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "logic",
+    "location": {
+      "column": "16",
+      "line": "156",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "logic",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@4952@F@Dio_ReadChannel@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "10",
+      "line": "157",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_GetVersionInfo",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Dio_GetVersionInfo(Std_VersionInfoType *)",
+    "location": {
+      "column": "6",
+      "line": "233",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_GetVersionInfo",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Dio_FlipChannel",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "Dio_LevelType Dio_FlipChannel(Dio_ChannelType)",
+    "location": {
+      "column": "15",
+      "line": "272",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Dio_FlipChannel",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@8592@F@Dio_FlipChannel@Port_Ptr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Port_Ptr",
+    "location": {
+      "column": "20",
+      "line": "274",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "Port_Ptr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@8633@F@Dio_FlipChannel@logic",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "logic",
+    "location": {
+      "column": "16",
+      "line": "275",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "logic",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio.c@8666@F@Dio_FlipChannel@error",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "error",
+    "location": {
+      "column": "10",
+      "line": "276",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio.c"
+    },
+    "name": "error",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_Regs.h@364@macro@DIO_REGS_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_SW_MAJOR_VERSION",
+    "display": "DIO_REGS_H",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
+    },
+    "name": "DIO_REGS_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_Regs.h@412@macro@GPIO_PORTA_DATA_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_PORTA_DATA_REG",
     "location": {
       "column": "9",
       "line": "17",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_SW_MAJOR_VERSION",
-    "origin": "project_file",
+    "name": "GPIO_PORTA_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@468@macro@DIO_PBCFG_SW_MINOR_VERSION",
+    "ID": "c:Dio_Regs.h@482@macro@GPIO_PORTB_DATA_REG",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_SW_MINOR_VERSION",
+    "display": "GPIO_PORTB_DATA_REG",
     "location": {
       "column": "9",
       "line": "18",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_SW_MINOR_VERSION",
-    "origin": "project_file",
+    "name": "GPIO_PORTB_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@522@macro@DIO_PBCFG_SW_PATCH_VERSION",
+    "ID": "c:Dio_Regs.h@552@macro@GPIO_PORTC_DATA_REG",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_SW_PATCH_VERSION",
+    "display": "GPIO_PORTC_DATA_REG",
     "location": {
       "column": "9",
       "line": "19",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_SW_PATCH_VERSION",
-    "origin": "project_file",
+    "name": "GPIO_PORTC_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@613@macro@DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
+    "ID": "c:Dio_Regs.h@622@macro@GPIO_PORTD_DATA_REG",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
+    "display": "GPIO_PORTD_DATA_REG",
     "location": {
       "column": "9",
-      "line": "24",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "line": "20",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
-    "origin": "project_file",
+    "name": "GPIO_PORTD_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@666@macro@DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
+    "ID": "c:Dio_Regs.h@692@macro@GPIO_PORTE_DATA_REG",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
+    "display": "GPIO_PORTE_DATA_REG",
     "location": {
       "column": "9",
-      "line": "25",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "line": "21",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
-    "origin": "project_file",
+    "name": "GPIO_PORTE_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Dio_PBcfg.c@719@macro@DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
+    "ID": "c:Dio_Regs.h@762@macro@GPIO_PORTF_DATA_REG",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
+    "display": "GPIO_PORTF_DATA_REG",
     "location": {
       "column": "9",
-      "line": "26",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+      "line": "22",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_Regs.h"
     },
-    "name": "DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Dio_Configuration",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Dio_Configuration",
-    "location": {
-      "column": "22",
-      "line": "43",
-      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
-    },
-    "name": "Dio_Configuration",
-    "origin": "project_file",
+    "name": "GPIO_PORTF_DATA_REG",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -2497,6 +2861,104 @@
     },
     "name": "BIT_IS_CLEAR",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@414@macro@DIO_PBCFG_SW_MAJOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_SW_MAJOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_SW_MAJOR_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@468@macro@DIO_PBCFG_SW_MINOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_SW_MINOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_SW_MINOR_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@522@macro@DIO_PBCFG_SW_PATCH_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_SW_PATCH_VERSION",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_SW_PATCH_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@613@macro@DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_AR_RELEASE_MAJOR_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@666@macro@DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_AR_RELEASE_MINOR_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:Dio_PBcfg.c@719@macro@DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
+    "location": {
+      "column": "9",
+      "line": "26",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "DIO_PBCFG_AR_RELEASE_PATCH_VERSION",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Dio_Configuration",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Dio_Configuration",
+    "location": {
+      "column": "22",
+      "line": "43",
+      "path": "E:\\ARM & AUTOSAR\\Port Driver\\Dio Driver Autosar Driver\\Dio_PBcfg.c"
+    },
+    "name": "Dio_Configuration",
+    "origin": "project_file",
     "scope": null
   },
   {

@@ -2122,6 +2122,9 @@
         <name>$PROJ_DIR$\Det.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\Dio.c</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\Dio.h</name>
     </file>
     <file>
