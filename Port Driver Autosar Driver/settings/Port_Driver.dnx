@@ -26,13 +26,13 @@
     <LmiFtdiDriver>
         <LMIFTDIserialNo>0E234FFD</LMIFTDIserialNo>
         <LMIFTDIfoundProbes />
-        <LmiFtdiResetStyle>0</LmiFtdiResetStyle>
-        <LmiFtdiResetStrategy>0</LmiFtdiResetStrategy>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
+        <LmiFtdiResetStyle>0</LmiFtdiResetStyle>
+        <LmiFtdiResetStrategy>0</LmiFtdiResetStrategy>
     </LmiFtdiDriver>
     <DebugChecksum>
-        <Checksum>3185260618</Checksum>
+        <Checksum>510298689</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -81,33 +81,62 @@
         <FreqHi>0</FreqHi>
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
-    <Trace2>
-        <Enabled>0</Enabled>
-        <ShowSource>0</ShowSource>
-    </Trace2>
-    <TermIOLog>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-    </TermIOLog>
-    <CallStackLog>
-        <Enabled>0</Enabled>
-    </CallStackLog>
-    <CallStackStripe>
-        <ShowTiming>1</ShowTiming>
-    </CallStackStripe>
+    <PlDdfRanges>
+        <ConfigRanges0>Memory ROM 16777216 520093696 1</ConfigRanges0>
+        <ConfigRanges1>Memory Periph1 1073741824 1048576 2</ConfigRanges1>
+        <ConfigRanges2>Memory Periph_BitBand 1107296256 33554432 2</ConfigRanges2>
+        <ConfigRanges3>Memory SystemSFR 3758096384 1048576 2</ConfigRanges3>
+        <ConfigRanges4>Memory Flash 0 262144 1</ConfigRanges4>
+        <ConfigRanges5>Memory RAM 536870912 32768 0</ConfigRanges5>
+        <ConfigRanges6>Memory RAM_BitBand 570425344 1048576 0</ConfigRanges6>
+    </PlDdfRanges>
+    <PlCacheRanges>
+        <CustomRanges0>0 0 262144 1 0</CustomRanges0>
+        <CustomRangesText0 />
+        <CustomRanges1>0 16777216 520093696 1 0</CustomRanges1>
+        <CustomRangesText1 />
+        <CustomRanges2>0 536870912 32768 0 0</CustomRanges2>
+        <CustomRangesText2 />
+        <CustomRanges3>0 570425344 1048576 0 0</CustomRanges3>
+        <CustomRangesText3 />
+        <CustomRanges4>0 1073741824 1048576 2 0</CustomRanges4>
+        <CustomRangesText4 />
+        <CustomRanges5>0 1107296256 33554432 2 0</CustomRanges5>
+        <CustomRangesText5 />
+        <CustomRanges6>0 3758096384 1048576 2 0</CustomRanges6>
+        <CustomRangesText6 />
+    </PlCacheRanges>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
         <Category2>_ 2</Category2>
     </LogFile>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
     <DisassembleMode>
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
         <Count>0</Count>
     </Breakpoints2>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
     <Aliases>
         <Count>0</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+    <SfrWindow>
+        <Show>1 1</Show>
+        <Sort>4 0</Sort>
+    </SfrWindow>
 </settings>

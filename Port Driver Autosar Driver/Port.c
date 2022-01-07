@@ -103,10 +103,10 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
       SET_BIT(SYSCTL_REGCGC2_REG,Port_Channels[index].port_num);
       /* To wait 3-seconds (Equal Operation takes 3-seconds )*/
       dealy=SYSCTL_REGCGC2_REG;
-      /* Important check : In TivaC PC7 & PF0 are special pins which *
+      /* Important check : In TivaC PD7 & PF0 are special pins which *
        *                   are needed to be unlocked first before    *
        *                   write in it                               */
-      if(((Port_Channels[index].port_num == PORTC_ID) && (Port_Channels[index].pin_num == SPECIAL_PIN_PC7))\
+      if(((Port_Channels[index].port_num == PORTD_ID) && (Port_Channels[index].pin_num == SPECIAL_PIN_PC7))\
        ||((Port_Channels[index].port_num == PORTF_ID) && (Port_Channels[index].pin_num == SPECIAL_PIN_PF0)))
       {
         /* To unlock the commit register we put the magic number which is defined in port.h */
