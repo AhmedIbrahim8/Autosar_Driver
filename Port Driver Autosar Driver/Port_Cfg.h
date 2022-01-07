@@ -121,11 +121,11 @@
 #define PORTE_PIN4_ID_INDEX   (uint8)36
 #define PORTE_PIN5_ID_INDEX   (uint8)37
       /* PORTF has 5-pins */
-#define PORTF_PIN0_ID_INDEX   (uint8)38
-#define PORTF_PIN1_ID_INDEX   (uint8)39
-#define PORTF_PIN2_ID_INDEX   (uint8)40
-#define PORTF_PIN3_ID_INDEX   (uint8)41
-#define PORTF_PIN4_ID_INDEX   (uint8)42
+#define PORTF_PIN0_ID_INDEX   (uint8)38   /* Switch 1 Index */
+#define PORTF_PIN1_ID_INDEX   (uint8)39   /* Led 1 Index    */
+#define PORTF_PIN2_ID_INDEX   (uint8)40   /* Led 2 Index    */
+#define PORTF_PIN3_ID_INDEX   (uint8)41   /* Led 3 Index    */
+#define PORTF_PIN4_ID_INDEX   (uint8)42   /* Switch 2 Index */
 
 /***********************************************
  *     Choosen Configuration By the Tool       *
@@ -177,11 +177,11 @@
 #define PORTE_PIN4_DIRECTION  PORT_PIN_IN
 #define PORTE_PIN5_DIRECTION  PORT_PIN_IN
 /* PORTF ( 5 Pins ) */
-#define PORTF_PIN0_DIRECTION  PORT_PIN_IN
-#define PORTF_PIN1_DIRECTION  PORT_PIN_OUT /* Led pin Should be output pin*/
-#define PORTF_PIN2_DIRECTION  PORT_PIN_IN
-#define PORTF_PIN3_DIRECTION  PORT_PIN_IN
-#define PORTF_PIN4_DIRECTION  PORT_PIN_IN /* Switch pin should be input pin */
+#define PORTF_PIN0_DIRECTION  PORT_PIN_IN  /* Switch 1 pin should be input pin */
+#define PORTF_PIN1_DIRECTION  PORT_PIN_OUT /* Led 1 pin Should be output pin   */
+#define PORTF_PIN2_DIRECTION  PORT_PIN_OUT /* Led 2 pin Should be output pin   */
+#define PORTF_PIN3_DIRECTION  PORT_PIN_OUT /* Led 3 pin Should be output pin   */
+#define PORTF_PIN4_DIRECTION  PORT_PIN_IN  /* Switch 2 pin should be input pin */
 
 /****************************************************
  *     Choosen Configuration By the Tool            *
@@ -400,11 +400,12 @@
 #define PORTE_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
 #define PORTE_PIN5_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
 /* PORTF ( 5 Pins ) */
-#define PORTF_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
-#define PORTF_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW /* Led Pin initial value is low */
-#define PORTF_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
-#define PORTF_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW
-/* switch Pin initial value is low (will not be affected because it is input pin)*/
+/* switch 1 Pin initial value is low (will not be affected because it is input pin)*/
+#define PORTF_PIN0_LEVEL_VALUE      PORT_PIN_LEVEL_LOW 
+#define PORTF_PIN1_LEVEL_VALUE      PORT_PIN_LEVEL_LOW /* Led 1 Pin initial value is low */
+#define PORTF_PIN2_LEVEL_VALUE      PORT_PIN_LEVEL_LOW /* Led 2 Pin initial value is low */
+#define PORTF_PIN3_LEVEL_VALUE      PORT_PIN_LEVEL_LOW /* Led 3 Pin initial value is low */
+/* switch 2 Pin initial value is low (will not be affected because it is input pin)*/
 #define PORTF_PIN4_LEVEL_VALUE      PORT_PIN_LEVEL_LOW 
 
 /****************************************************

@@ -1,6 +1,8 @@
 #include "Port.h"
 #include "Det.h"
 #include <assert.h>
+#include "Port_Regs.h"
+
 /* # used in Test Case 3 and 4 */
 #define PORT_PIN_INDEX_OUT_OF_RANGE          (100U)
 #define PORT_PIN_MODE_NO_THING               (100U)
@@ -112,6 +114,15 @@ int main()
   
   while(1)
   {
+    if(BIT_IS_CLEAR(*(volatile uint32 *)(GPIO_PORTF_BASE_ADDRESS+PORT_DATA_REG_OFFSET),PORTF_PIN0_ID))
+    {
+      SET_BIT(*(volatile uint32 *)(GPIO_PORTF_BASE_ADDRESS+PORT_DATA_REG_OFFSET),PORTF_PIN1_ID);
+    }
+    else
+    {
+      CLEAR_BIT(*(volatile uint32 *)(GPIO_PORTF_BASE_ADDRESS+PORT_DATA_REG_OFFSET),PORTF_PIN1_ID);
+    }
+    
     
   }
   

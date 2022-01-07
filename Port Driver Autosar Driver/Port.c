@@ -167,6 +167,9 @@ void Port_Init( const Port_ConfigType* ConfigPtr )
       {
         /* Pin is output so one(1) should be put in the bit number at the Direction Register */
         SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_DIR_REG_OFFSET),Port_Channels[index].pin_num);
+        /* PIN is Output so, We will clear the bit of this pin at the pull up and pull down register (To ensure that it is zero) */
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_DOWN_REG_OFFSET),Port_Channels[index].pin_num);
+        CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Base_Address_Ptr+PORT_PULL_UP_REG_OFFSET),Port_Channels[index].pin_num);
         /* if initial value of the pin equal zero */
         if(Port_Channels[index].initial_value == PORT_PIN_LEVEL_LOW)
         {
