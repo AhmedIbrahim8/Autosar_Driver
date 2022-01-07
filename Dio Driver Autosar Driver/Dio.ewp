@@ -180,7 +180,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -2109,6 +2109,9 @@
             </data>
         </settings>
     </configuration>
+    <file>
+        <name>$PROJ_DIR$\Common_Macros.h</name>
+    </file>
     <file>
         <name>$PROJ_DIR$\Compiler.h</name>
     </file>
