@@ -469,21 +469,21 @@ void Port_SetPinDirection( Port_PinType Pin,
   boolean error= FALSE;
   /* Det error checking code will be removed if it is off at the configuration tool */
 #if(PORT_DEV_ERROR_DETECT == STD_ON)
-  /* Checking the status of the port driver. if it is uninitialized it will report  *
-   * a det error and change the state of the error to TRUE.                         */
-  if(Port_Status==PORT_NOT_INITIALIZED)
+  /* Checking if the pin direction is not changeable, it will report a det error *
+   * and change the state of the error to be TRUE.                               */
+  if(Port_Channels[Pin].direction_changeable==STD_OFF)
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
                     PORT_SET_PIN_DIRECTION_SID,
-                    PORT_E_UNINIT);
+                    PORT_E_DIRECTION_UNCHANGEABLE);
     /* Error is happened so, it will be TRUE */
     error= TRUE;
   }
   /* Misra Rules */
   else
   {
-    /* No Action Needed*/
+    /* No Action Needed */
   }
   /* Checking if the pin equal or greater than the Port Configured Channels, it will*
    * report a det error and change the state of the error to be TRUE.               */
@@ -501,21 +501,21 @@ void Port_SetPinDirection( Port_PinType Pin,
   {
     /* No Action Needed*/
   }
-  /* Checking if the pin direction is not changeable, it will report a det error *
-   * and change the state of the error to be TRUE.                               */
-  if(Port_Channels[Pin].direction_changeable==STD_OFF)
+  /* Checking the status of the port driver. if it is uninitialized it will report  *
+   * a det error and change the state of the error to TRUE.                         */
+  if(Port_Status==PORT_NOT_INITIALIZED)
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
                     PORT_SET_PIN_DIRECTION_SID,
-                    PORT_E_DIRECTION_UNCHANGEABLE);
+                    PORT_E_UNINIT);
     /* Error is happened so, it will be TRUE */
     error= TRUE;
   }
   /* Misra Rules */
   else
   {
-    /* No Action Needed */
+    /* No Action Needed*/
   }
 
 #endif /* End Of Det Error Checking */
@@ -727,7 +727,7 @@ void Port_GetVersionInfo( Std_VersionInfoType* versioninfo )
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
-                    PORT_VERSION_INFO_API,
+                    PORT_GET_VERSION_INFO_SID,
                     PORT_E_PARAM_POINTER);
   }
   else
@@ -774,36 +774,6 @@ void Port_SetPinMode( Port_PinType Pin,
   boolean error= FALSE;
   /* Det error checking code will be removed if it is off at the configuration tool */
 #if(PORT_DEV_ERROR_DETECT == STD_ON)
-  /* Checking the status of the port driver. if it is uninitialized it will report  *
-   * a det error and change the state of the error to TRUE.                         */
-  if(Port_Status == PORT_NOT_INITIALIZED)
-  {
-    Det_ReportError(PORT_MODULE_ID,
-                    PORT_INSTANCE_ID,
-                    PORT_SET_PIN_MODE_SID,
-                    PORT_E_UNINIT);
-    error= TRUE;
-  }
-  /* Misra Rules */
-  else
-  {
-    /* No Action Neede */
-  }
-  /* Checking if the pin equal or greater than the Port Configured Channels, it will*
-   * report a det error and change the state of the error to be TRUE.               */
-  if(Pin>=PORT_CONFIGURED_PINS)
-  {
-    Det_ReportError(PORT_MODULE_ID,
-                    PORT_INSTANCE_ID,
-                    PORT_SET_PIN_MODE_SID,
-                    PORT_E_PARAM_PIN);
-    error= TRUE;
-  }
-  /* Misra Rules */
-  else
-  {
-    /* No Action Needed */
-  }
   /* PORT223: If Det is enabled, the function Port_SetPinMode shall return PORT_E_MODE_UNCHANGEABLE  *
    * and return without any action, if the parameter PortPinModeChangeable is set to FALSE.          */
   if(Port_Channels[Pin].mode_changeable == STD_OFF)
@@ -820,7 +790,7 @@ void Port_SetPinMode( Port_PinType Pin,
     /* No Action Needed */
   }
   /* If the mode is out of range, it will report a det error and change the state of the error to be true */
-  if((Mode >= PORT_FIRST_MODE_NUMBER) && (Mode <= PORT_LAST_MODE_NUMBER))
+  if(Mode > PORT_LAST_MODE_NUMBER)
   {
     Det_ReportError(PORT_MODULE_ID,
                     PORT_INSTANCE_ID,
@@ -832,6 +802,36 @@ void Port_SetPinMode( Port_PinType Pin,
   else
   {
     /* No Action Needed */
+  }
+  /* Checking if the pin equal or greater than the Port Configured Channels, it will*
+   * report a det error and change the state of the error to be TRUE.               */
+  if(Pin>=PORT_CONFIGURED_PINS)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_PARAM_PIN);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Needed */
+  }
+  /* Checking the status of the port driver. if it is uninitialized it will report  *
+   * a det error and change the state of the error to TRUE.                         */
+  if(Port_Status == PORT_NOT_INITIALIZED)
+  {
+    Det_ReportError(PORT_MODULE_ID,
+                    PORT_INSTANCE_ID,
+                    PORT_SET_PIN_MODE_SID,
+                    PORT_E_UNINIT);
+    error= TRUE;
+  }
+  /* Misra Rules */
+  else
+  {
+    /* No Action Neede */
   }
   
 #endif
