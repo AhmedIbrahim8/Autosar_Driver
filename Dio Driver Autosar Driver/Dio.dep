@@ -29,6 +29,12 @@
             <file>$PROJ_DIR$\Dio_Cfg.c</file>
             <file>$PROJ_DIR$\Dio_Cfg.h</file>
             <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Dio.o</file>
             <file>$PROJ_DIR$\Debug\Obj\Dio_Cfg.o</file>
         </outputs>
@@ -55,6 +61,12 @@
                     <file> 23</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25 28 26 24 27 29 20 3 16 15 22 0 2 1</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Dio.out</name>
@@ -67,7 +79,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 13 7 5 8 11 9 12 23</file>
+                    <file> 13 7 5 8 11 9 30 12 23</file>
                 </tool>
             </inputs>
         </file>
@@ -91,7 +103,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 24</file>
+                    <file> 30</file>
                 </tool>
             </outputs>
             <inputs>
@@ -106,7 +118,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 25</file>
+                    <file> 31</file>
                 </tool>
             </outputs>
         </file>
