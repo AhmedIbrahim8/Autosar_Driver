@@ -24,10 +24,19 @@ rule PDBLINK
 
 
 #Build steps
+build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Det.c" -xcl_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.xcl" -macro_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Det.c" -o "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.tmp"
+  rspfile_name = E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.xcl.rsp
+
 build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
   xclcommand = -source_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\main.c" -xcl_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.xcl" -macro_file "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\main.c" -o "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.tmp"
   rspfile_name = E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.xcl.rsp
+
+build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.pbi : INDEXER E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.xcl |  $
+E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Det.c
+  flags = "-out=E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.pbi" -f "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.xcl"
 
 build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.pbi : INDEXER E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.xcl |  $
 E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\main.c
@@ -36,6 +45,7 @@ E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\main.c
 build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbw : MAKEBROWSE E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd
   flags = "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd" -output "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbw"
 
-build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd : PDBLINK E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.pbi
-  flags = -M "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd" "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.pbi"
+build E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd : PDBLINK E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.pbi |  $
+E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.pbi
+  flags = -M "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Dio.pbd" "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\Det.pbi" "E$:\ARM$ &$ AUTOSAR\Port$ Driver\Dio$ Driver$ Autosar$ Driver\Debug\BrowseInfo\main.pbi"
 
