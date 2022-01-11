@@ -6816,16 +6816,16 @@
     "scope": null
   },
   {
-    "ID": "c:Port.h@6667@macro@SPECIAL_PIN_PC7",
+    "ID": "c:Port.h@6667@macro@SPECIAL_PIN_PD7",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SPECIAL_PIN_PC7",
+    "display": "SPECIAL_PIN_PD7",
     "location": {
       "column": "9",
       "line": "175",
       "path": "E:\\ARM & AUTOSAR\\Port Driver\\Port Driver Autosar Driver\\Port.h"
     },
-    "name": "SPECIAL_PIN_PC7",
+    "name": "SPECIAL_PIN_PD7",
     "origin": "user_include",
     "scope": null
   },

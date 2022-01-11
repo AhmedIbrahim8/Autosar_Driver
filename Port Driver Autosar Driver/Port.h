@@ -172,7 +172,7 @@ typedef struct{
  ********************************************************************************/
 #define FIRST_LOOP              (0U)
 #define MAGIC_NUMBER        (0x4C4F434B)
-#define SPECIAL_PIN_PC7         (7U)
+#define SPECIAL_PIN_PD7         (7U)
 #define SPECIAL_PIN_PF0         (0U)
 #define JTAG_PIN_PC0            (0U)
 #define JTAG_PIN_PC1            (1U)
